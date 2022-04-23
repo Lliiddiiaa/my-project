@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 180px;
+    height: 16px;
+}
+
+.header {
+    background-image: url('./img/background-home.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-top .wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 121px;
+    align-items: center;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav ul li{
+   height: 16px;
+}
+
+.nav ul a{
+    text-decoration: none;
+    font-size:14px;
+    line-height: 16.8px;
+    color: white;
+}
+
+.nav ul li:first-child,
+.nav-left ul li:nth-child(2) {
+    margin-right: 48px;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 91px;
+}
+
+.card-header-slider {
+    width: 87%;
+    height: 684px;
+}
+
+
+

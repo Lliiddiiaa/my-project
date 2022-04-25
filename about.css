@@ -12,22 +12,38 @@
     width: 180px;
     height: 16px;
 }
-
+/*-------------------------*/
 h1 {
     font-weight: 400;
     font-size: 48px;
     line-height: 120%;
-    color: white;
-    border-bottom: 2px solid white;
-    margin: 0 auto;
+    color: #555555;
+    margin: 29px 0;
 }
 
 .header {
-    background-image: url('./img/background-home.png');
-    background-size: cover;
+    background-color: #F5ECE3;
+}
+
+.nav-icon {
+    width: 16px;
+    height: 16px;
+    background-position:center;
     background-repeat: no-repeat;
 }
 
+.icon-search-black {
+    background-image: url('./img/icon-search-black.png');
+}
+
+.icon-cart-black {
+    background-image: url('./img/icon-cart-black.png');
+}
+
+.icon-cabinet-black {
+    background-image: url('./img/icon-cabinet-black.png');
+}
+/*-------------------------*/
 .header-top .wrapper {
     display: flex;
     justify-content: space-between;
@@ -44,12 +60,14 @@ h1 {
    height: 16px;
 }
 
+/*--------------------------*/
 .nav ul a{
     text-decoration: none;
     font-size:14px;
     line-height: 16.8px;
-    color: white;
+    color: #555555;
 }
+/*-----------------------------*/
 
 .nav ul li:first-child,
 .nav-left ul li:nth-child(2) {
@@ -62,135 +80,63 @@ h1 {
     width: 91px;
 }
 
-.header-slider .wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.card-header-slider {
-    width: 87%;
-    height: 684px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.arrow {
-    background: rgba(136, 136, 136, 0.3);
-    backdrop-filter: blur(14px);
-    border-radius: 60px;
-    padding: 15px 23px;
-    cursor: pointer;
-}
-
-.header-slider-nav {
-    height: 95px;
-}
-
-
 .main {
     background-color: #F5ECE3;
 }
 
-.about-col2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main .wrapper {
+    width: 62%;
+    padding-bottom: 139px;
 }
 
-.content-wrapper {
-    width: 73%;
-}
-
-.about .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.main p {
     color: #555555;
+    font-size: 20px;
+    line-height: 180%;
 }
 
-.about_logo {
-    margin-bottom: 67px;
+.main a {
+    text-decoration: none;
 }
 
-.quote {
-    font-weight: 400;
+.about-bc-img {
+    margin: 56px 0;
+    width: 100%;
+}
+
+.quote-card {
+    display: flex;
+    justify-content: center;
+    background-color: #EEE4DA;
+    padding-top: 52px;
+    padding-bottom: 61px;
+    margin-top: 42px;
+}
+
+.quote-card-content {
+    width: 86%;
+}
+
+.quote-text {
     font-size: 32px;
     line-height: 150%;
-    margin-bottom: 34px;
-}
-
-.description {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 180%;
-    margin-bottom: 44px;
-}
-
-.signature {
-    display: flex;
-}
-
-.signature-desription {
-    margin-right: 35px;
-}
-
-.name {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 130%;
-    letter-spacing: -0.02em;
-    margin-bottom: 4px;
-}
-
-.position {
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 130%;
-}
-
-.instagram .wrapper p {
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 130%;
-    letter-spacing: -0.02em;
-    color:#555555
-}
-
-.instagram-quote {
-    display: flex;
-    justify-content:space-between;
-    padding-top: 137px;
-    padding-bottom: 100px;
-}
-
-.instagram-quote p {
-    width: 540px;
-}
-
-.insta-button-wrapper {
-    display: flex;
-    align-items: flex-end;
-}
-
-.insta-button-wrapper a{
-    text-decoration: none;
+    letter-spacing: -0.03em;
     color: #555555;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 120%;
-    background-color: #EEE4DA;
-    backdrop-filter: blur(14px);
-    border-radius: 66px;
-    padding: 28px 99px;
 }
 
-.instagram-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 20px;
-    padding-bottom: 127px;
+.back-page {
+    display: flex;
+    align-items: center;
+}
+
+.about-card-signature {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 29px;
+}
+
+.icon-signature-block {
+    display: flex;
 }
 
 .footer {

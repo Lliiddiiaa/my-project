@@ -99,6 +99,28 @@ h1 {
     text-decoration: none;
 }
 
+.about-numbers {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 2;
+    grid-column-gap: 96px;
+    grid-row-gap: 67px;
+    margin: 67px 0;
+}
+
+.number-card h2{
+    font-size: 96px;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    color: #E3DAD0;
+}
+
+.number-card p {
+    font-size: 20px;
+    line-height: 180%;
+    color: #555555;
+}
+
 .about-bc-img {
     margin: 56px 0;
     width: 100%;
@@ -122,6 +144,7 @@ h1 {
     line-height: 150%;
     letter-spacing: -0.03em;
     color: #555555;
+    width: 70%;
 }
 
 .back-page {
@@ -137,6 +160,23 @@ h1 {
 
 .icon-signature-block {
     display: flex;
+}
+
+.signature-description {
+    margin-left: 25px;
+}
+
+.name, 
+.position {
+    line-height: 130% !important;  
+}
+
+.name {
+    font-size: 24px !important;
+}
+
+.position {
+    font-size: 13px !important;
 }
 
 .footer {

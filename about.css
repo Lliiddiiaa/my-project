@@ -85,7 +85,7 @@ h1 {
 }
 
 .main .wrapper {
-    width: 62%;
+    width: 56%;
     padding-bottom: 139px;
 }
 
@@ -97,6 +97,11 @@ h1 {
 
 .main a {
     text-decoration: none;
+}
+
+.back-page {
+    display: flex;
+    align-items: center;
 }
 
 .about-numbers {
@@ -126,6 +131,17 @@ h1 {
     width: 100%;
 }
 
+.quote-text {
+    width: 70%;
+}
+
+.quote-text p {
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: #555555;
+}
+
 .quote-card {
     display: flex;
     justify-content: center;
@@ -137,19 +153,6 @@ h1 {
 
 .quote-card-content {
     width: 86%;
-}
-
-.quote-text {
-    font-size: 32px;
-    line-height: 150%;
-    letter-spacing: -0.03em;
-    color: #555555;
-    width: 70%;
-}
-
-.back-page {
-    display: flex;
-    align-items: center;
 }
 
 .about-card-signature {

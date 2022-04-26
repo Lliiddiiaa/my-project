@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 180px;
+    height: 16px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    color: #555555;
+    margin: 29px 0;
+}
+
+.header {
+    background-color: #F5ECE3;
+}
+
+.nav-icon {
+    width: 16px;
+    height: 16px;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+.icon-search-black {
+    background-image: url('./img/icon-search-black.png');
+}
+
+.icon-cart-black {
+    background-image: url('./img/icon-cart-black.png');
+}
+
+.icon-cabinet-black {
+    background-image: url('./img/icon-cabinet-black.png');
+}
+/*-------------------------*/
+.header-top .wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 121px;
+    align-items: center;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav ul li{
+   height: 16px;
+}
+
+/*--------------------------*/
+.nav ul a{
+    text-decoration: none;
+    font-size:14px;
+    line-height: 16.8px;
+    color: #555555;
+}
+/*-----------------------------*/
+
+.nav ul li:first-child,
+.nav-left ul li:nth-child(2) {
+    margin-right: 48px;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 91px;
+}

@@ -1,0 +1,102 @@
+.footer {
+    background-color: #EEE4DA
+}
+
+.footer-logo {
+    margin: 0 auto;
+    padding-top: 75px;
+    padding-bottom: 65px;
+}
+
+.footer-top {
+    border-bottom: 1px solid #E2D9CF;
+}
+
+.footer a, 
+.footer p {
+    color:#555555;
+    opacity: 0.4;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 160%;
+}
+
+.footer a {
+    text-decoration: none;
+    width: 36px;
+    height: 36px;
+    background-color: #F5ECE3;
+    border-radius: 50%;
+}
+
+.footer li {
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+.footer-bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    column-gap: 160px;
+    padding-top: 64px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #555555;
+}
+
+.footer-company h3,
+.footer-contacts h3 {
+    margin-bottom: 26px;
+}
+
+.footer-navigation h3, 
+.footer-products h3 {
+    margin-bottom: 42px;
+}
+
+.footer-icons {
+    margin: 26px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-fb {
+    background-image: url('./img/icon-fb.png');
+}
+
+.icon-insta {
+    background-image: url('./img/icon-insta-fot.png');
+}
+
+.icon-tw {
+    background-image: url('./img/icon-tw.png');
+}
+
+.icon-youtube {
+    background-image: url('./img/icon-youtube.png');
+}
+
+.icon-vk {
+    background-image: url('./img/icon-vk.png');
+}
+
+.social-media {
+    margin-top: 24px;
+}
+
+.social-media a {
+    margin-right: 35px;
+}

@@ -1,0 +1,91 @@
+.main {
+    background-color: #F5ECE3;
+}
+
+.main .wrapper {
+    width: 57%;
+    padding-bottom: 110px;
+}
+
+.main p {
+    color: #555555;
+    font-size: 20px;
+    line-height: 180%;
+}
+
+.main a {
+    text-decoration: none;
+}
+
+.back-page {
+    display: flex;
+    align-items: center;
+}
+
+.number-card h2{
+    font-size: 96px;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    color: #E3DAD0;
+}
+
+.number-card p {
+    font-size: 20px;
+    line-height: 180%;
+    color: #555555;
+}
+
+.bc-img {
+    width: 100%;
+    margin: 56px 0;
+}
+
+.quote-text {
+    width: 70%;
+}
+
+.quote-text p {
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: #555555;
+}
+
+.quote-card {
+    display: flex;
+    justify-content: center;
+    background-color: #EEE4DA;
+    padding-top: 52px;
+    padding-bottom: 61px;
+}
+
+.quote-card-content {
+    width: 86%;
+}
+
+.card-signature {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 29px;
+}
+
+.icon-signature-block {
+    display: flex;
+}
+
+.signature-description {
+    margin-left: 25px;
+}
+
+.name, 
+.position {
+    line-height: 130% !important;  
+}
+
+.name {
+    font-size: 24px !important;
+}
+
+.position {
+    font-size: 13px !important;
+}

@@ -10,20 +10,34 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=e71f72b3-6dfe-4f03-b976-9bf62bf72372&lang=ru_RU" type="text/javascript"></script>
     <title>Contacts</title>
     <script type="text/javascript">
-        ymaps.ready(init);
-        function init(){
-
+        ymaps.ready(function() {
+        
             var myMap = new ymaps.Map("map", {
-                // Координаты центра карты.
-                // Порядок по умолчанию: «широта, долгота».
-                // Чтобы не определять координаты центра карты вручную,
-                // воспользуйтесь инструментом Определение координат.
-                center: [55.76, 37.64],
-                // Уровень масштабирования. Допустимые значения:
-                // от 0 (весь мир) до 19.
-                zoom: 7
-            });
-        }
+                center: [25.18, 55.25],
+                zoom: 12
+            }, {
+                searchControlProvider: 'yandex#search'
+        }),
+
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '../img/map-marker.png',
+            iconImageSize: [42, 42],
+            iconImageOffset: [-5, -38]
+        });
+
+        myMap.geoObjects
+        .add(myPlacemark)
+        .add(myPlacemarkWithContent);
+           
+        });
     </script>
 </head>
 <body>

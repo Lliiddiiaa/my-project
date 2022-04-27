@@ -25,8 +25,8 @@
 
 .footer a {
     text-decoration: none;
-    width: 36px;
-    height: 36px;
+    /* width: 36px;
+    height: 36px; */
     background-color: #F5ECE3;
     border-radius: 50%;
 }
@@ -99,4 +99,29 @@ h3 {
 
 .social-media a {
     margin-right: 35px;
+}
+
+.email,
+.whats {
+    margin-left: 20px;
+}
+
+.email::before,
+.whats::before {
+        content: "";
+        position: relative;
+        float: left;
+        margin: 2px 5px 0 0;
+        width: 24px;
+        height: 35px;
+        background-repeat: no-repeat;
+        background-position: center;
+}
+
+.email::before {
+    background-image: url('../img/icon-mail.png');
+}
+
+.whats::before {
+    background-image: url('../img/icon-whats.png');
 }

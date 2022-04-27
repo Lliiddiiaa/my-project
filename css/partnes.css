@@ -31,3 +31,21 @@
 .quote-text {
     margin-bottom: 42px;
 }
+
+
+.btn-partner p {
+    width: 195px;
+    margin: 0 auto;
+}
+
+.btn-partner p::after {
+    content: "";
+    position: relative;
+    float: right;
+    margin: 2px 5px 0 0;
+    width: 24px;
+    height: 35px;
+    background-image: url('../img/btn-arrow-right.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -33,15 +33,15 @@ h1 {
 }
 
 .icon-search-black {
-    background-image: url('./img/icon-search-black.png');
+    background-image: url('../img/icon-search-black.png');
 }
 
 .icon-cart-black {
-    background-image: url('./img/icon-cart-black.png');
+    background-image: url('../img/icon-cart-black.png');
 }
 
 .icon-cabinet-black {
-    background-image: url('./img/icon-cabinet-black.png');
+    background-image: url('../img/icon-cabinet-black.png');
 }
 /*-------------------------*/
 .header-top .wrapper {

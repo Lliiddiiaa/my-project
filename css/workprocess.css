@@ -3,6 +3,11 @@
     margin-bottom: 70px;
 }
 
-.main-text {
+.main-text,
+.video {
     margin-bottom: 50px;
+}
+
+.video {
+    width: 100%;
 }

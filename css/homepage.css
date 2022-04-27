@@ -23,7 +23,7 @@ h1 {
 }
 
 .header {
-    background-image: url('./img/background-home.png');
+    background-image: url('../img/background-home.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -178,11 +178,23 @@ h1 {
     color: #555555;
     font-weight: 400;
     font-size: 20px;
-    line-height: 120%;
+    line-height: 24px;
     background-color: #EEE4DA;
     backdrop-filter: blur(14px);
     border-radius: 66px;
     padding: 28px 99px;
+}
+
+.insta-button-wrapper a::before{
+    content: "";
+    position: relative;
+    float: left;
+    margin: 2px 5px 0 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/icon-insta-btn.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .instagram-grid {
@@ -269,23 +281,23 @@ h3 {
 }
 
 .icon-fb {
-    background-image: url('./img/icon-fb.png');
+    background-image: url('../img/icon-fb.png');
 }
 
 .icon-insta {
-    background-image: url('./img/icon-insta-fot.png');
+    background-image: url('../img/icon-insta-fot.png');
 }
 
 .icon-tw {
-    background-image: url('./img/icon-tw.png');
+    background-image: url('../img/icon-tw.png');
 }
 
 .icon-youtube {
-    background-image: url('./img/icon-youtube.png');
+    background-image: url('../img/icon-youtube.png');
 }
 
 .icon-vk {
-    background-image: url('./img/icon-vk.png');
+    background-image: url('../img/icon-vk.png');
 }
 
 .social-media {

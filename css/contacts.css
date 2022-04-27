@@ -78,7 +78,7 @@
 }
 
 .social-icon-fb {
-    background-image: url('./img/icon-fb.png');
+    background-image: url('../img/icon-fb.png');
     background-size: 19% 25%;
 }
 
@@ -144,6 +144,28 @@
     border-radius: 66px;
     cursor: pointer;
     font-size: 20px;
-    line-height: 120%;
+    line-height: 24px;
     color: #555555;
+}
+
+.btn-request p {
+    width: 165px;
+    margin: 0 auto;
+}
+
+.btn-request p::after {
+    content: "";
+    position: relative;
+    float: right;
+    margin: 2px 5px 0 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/btn-arrow-right.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#map {
+    width: 100%;
+    height: 550px;
 }

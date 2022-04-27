@@ -17,9 +17,20 @@
     text-decoration: none;
 }
 
-.back-page {
-    display: flex;
-    align-items: center;
+.back-page a {
+    line-height: 17px;
+}
+
+.back-page a::before {
+    content: "";
+    position: relative;
+    float: left;
+    margin: 2px 5px 0 0;
+    width: 34px;
+    height: 34px;
+    background-image: url('../img/arrow-black-left.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .number-card h2{

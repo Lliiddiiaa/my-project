@@ -74,23 +74,23 @@ h3 {
 }
 
 .icon-fb {
-    background-image: url('./img/icon-fb.png');
+    background-image: url('../img/icon-fb.png');
 }
 
 .icon-insta {
-    background-image: url('./img/icon-insta-fot.png');
+    background-image: url('../img/icon-insta-fot.png');
 }
 
 .icon-tw {
-    background-image: url('./img/icon-tw.png');
+    background-image: url('../img/icon-tw.png');
 }
 
 .icon-youtube {
-    background-image: url('./img/icon-youtube.png');
+    background-image: url('../img/icon-youtube.png');
 }
 
 .icon-vk {
-    background-image: url('./img/icon-vk.png');
+    background-image: url('../img/icon-vk.png');
 }
 
 .social-media {

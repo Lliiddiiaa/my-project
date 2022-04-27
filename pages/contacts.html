@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./header.css">
-    <link rel="stylesheet" href="./footer.css">
-    <link rel="stylesheet" href="./contacts.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/contacts.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e71f72b3-6dfe-4f03-b976-9bf62bf72372&lang=ru_RU" type="text/javascript"></script>
     <title>Contacts</title>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init(){
+
+            var myMap = new ymaps.Map("map", {
+                // Координаты центра карты.
+                // Порядок по умолчанию: «широта, долгота».
+                // Чтобы не определять координаты центра карты вручную,
+                // воспользуйтесь инструментом Определение координат.
+                center: [55.76, 37.64],
+                // Уровень масштабирования. Допустимые значения:
+                // от 0 (весь мир) до 19.
+                zoom: 7
+            });
+        }
+    </script>
 </head>
 <body>
 
@@ -21,7 +38,7 @@
                         <li><a href="">Delivery</a></li>
                     </ul>
                 </nav>
-                <div class="logo header-logo"><img src="./img/logo-black.png" alt="logo"></div>
+                <div class="logo header-logo"><img src="../img/logo-black.png" alt="logo"></div>
                 <nav class="nav nav-right">
                     <ul>
                         <li><a href="">Contacts</a></li>
@@ -41,7 +58,7 @@
             <div class="wrapper-heading">
                 <h1>Our contacts</h1>
             </div>
-            <img class="contacts-bg" src="./img/contacts bg.png" alt="contacts-bg">
+            <img class="contacts-bg" src="../img/contacts bg.png" alt="contacts-bg">
             <div class="contacts-block">
                 <div class="contact-card">
                     <p class="contact-info-name">Call us</p>
@@ -60,7 +77,7 @@
                     <p class="contact-info">parthers@boltaeva.pro</p>
                 </div>
             </div>
-            <div class="map"></div>
+            <div id="map"></div>
             <section class="social-media-grid">
                 <div class="social-media-quote">
                     <p>Each Boltaeva brand product is truly unique - everything is thought out to the smallest detail.</p>
@@ -75,14 +92,14 @@
                     </div>
                 </div>
                 <div class="instagram-grid">
-                    <img src="./img/item1-insta-grid.png" alt="">
-                    <img src="./img/item2-insta-grid.png" alt="">
-                    <img src="./img/item1-insta-grid.png" alt="">
-                    <img src="./img/item2-insta-grid.png" alt="">
-                    <img src="./img/item3-insta-grid.png" alt="">
-                    <img src="./img/item4-insta-grid.png" alt="">
-                    <img src="./img/item3-insta-grid.png" alt="">
-                    <img src="./img/item4-insta-grid.png" alt="">
+                    <img src="../img/item1-insta-grid.png" alt="">
+                    <img src="../img/item2-insta-grid.png" alt="">
+                    <img src="../img/item1-insta-grid.png" alt="">
+                    <img src="../img/item2-insta-grid.png" alt="">
+                    <img src="../img/item3-insta-grid.png" alt="">
+                    <img src="../img/item4-insta-grid.png" alt="">
+                    <img src="../img/item3-insta-grid.png" alt="">
+                    <img src="../img/item4-insta-grid.png" alt="">
                 </div>
             </section>
             <section class="request-callback">
@@ -90,26 +107,26 @@
                     <div class="request-content">
                         <div class="logo-input">
                             <a href="#">
-                                <img src="./img/about-logo.png" alt="logo">
+                                <img src="../img/about-logo.png" alt="logo">
                             </a>
                         </div>
                         <h3>Request a call back</h3>
                         <div class="input-card">
                             <p>Surname, name and patronymic</p>
-                            <input type="text">
+                            <input type="text" placeholder="Rosa More|">
                         </div>
                         <div class="input-card">
                             <p>Contact number</p>
-                            <input type="tel">
+                            <input type="tel" placeholder="+1 (901) 650 - 45 - 50">
                         </div>
                         <div class="input-card">
                             <p>Email</p>
-                            <input type="email">
+                            <input type="email" placeholder="Rosamorena@gmail.com">
                         </div>
-                        <button class="btn-request">Request call</button>
+                        <button class="btn-request"><p>Request call</p></button>
                     </div>
                 </div>
-                <div class="request-col2"><img src="./img/contacts block bg.png" alt="contacts-block"></div>
+                <div class="request-col2"><img src="../img/contacts block bg.png" alt="contacts-block"></div>
             </section>
         </div>
     </main>
@@ -117,7 +134,7 @@
     <div class="footer">
         <div class="wrapper">
             <div class="footer-top">
-                <div class="logo footer-logo"><img src="./img/about-logo.png" alt=""></div>
+                <div class="logo footer-logo"><img src="../img/about-logo.png" alt=""></div>
                 </div>
                 <div class="footer-bottom">
                     <div class="footer-company">
@@ -131,7 +148,7 @@
                             <a class="icon icon-vk" href=""></a>
                         </div>
                         <div class="footer-signature">
-                            <img src="./img/signature.png" alt="">
+                            <img src="../img/signature.png" alt="">
                         </div>
                     </div>
                     <div class="footer-navigation">

@@ -100,3 +100,59 @@
 .position {
     font-size: 13px !important;
 }
+
+@media (max-width: 800px) {
+
+    .main .wrapper {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 426px) {
+    
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 66px;
+    }
+
+    .number-card p {
+        font-size: 16px;
+    }
+
+    .main p {
+        font-size: 16px;
+    }
+
+    .quote-text {
+        width: 100%;
+    }
+
+    .about-numbers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 33px;
+        grid-row-gap: 30px;
+    }
+
+    .quote-text p {
+        font-size: 27px !important;
+    }
+
+}
+
+
+@media (max-width: 376px) {
+
+    .icon-signature-block img {
+        display: none;
+    }
+
+}

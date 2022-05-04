@@ -322,3 +322,36 @@
         margin-left: 0;
     }
 }
+
+
+@media (max-width:376px) {
+
+    .input-card input {
+        width: 92%;
+    }
+
+    .btn-request {
+        width: 292px;
+    }
+}
+
+@media (max-width:376px) {
+
+    .social-icon {
+        margin-right: 20px;
+    }
+
+    .instagram-grid {
+        display: inline-block;
+    }
+
+    .instagram-grid img{
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .input-card input {
+        width: 80%;
+    }
+}

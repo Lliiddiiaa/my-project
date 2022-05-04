@@ -107,12 +107,23 @@
         width: 90%;
     }
 
+    .quote-text {
+        width: 100%;
+    }
+
+    .main .wrapper {
+        padding-bottom: 60px;
+    }
+
 }
 
 @media (max-width: 426px) {
     
     h1 {
         font-size: 36px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 
     p {
@@ -131,8 +142,12 @@
         font-size: 16px;
     }
 
-    .quote-text {
-        width: 100%;
+    .back-page p {
+        font-size: 14px !important;
+    }
+
+    .back-page {
+        margin-left: 30%;
     }
 
     .about-numbers {

@@ -4,6 +4,10 @@
     line-height: 250%;
 }
 
+.back-page p {
+    font-weight: 400 !important;
+}
+
 .main .wrapper p {
     font-weight: bold;
     margin-bottom: 20px;
@@ -11,4 +15,19 @@
 
 .bc-img {
     margin-top: 0 !important;
+}
+
+@media (max-width:800px) {
+
+    ul {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width:321px) {
+
+    .main li {
+    color: #555555;
+    font-size: 16px; 
+    }
 }

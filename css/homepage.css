@@ -28,22 +28,15 @@ h1 {
     background-repeat: no-repeat;
 }
 
-.top-menu {
+/* .top-menu {
     position: relative;
-    /* background-color: rgba(34, 34, 34, 0.2); */
-}
+} */
   
 .menu-main {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-  
-/* .menu-main::after {
-    content: "";
-    display: table;
-    clear: both;
-} */
   
 .left-item {
     float: left;
@@ -62,7 +55,7 @@ h1 {
   
 .menu-main a {
     text-decoration: none;
-    display: block;
+    /* display: block; */
     line-height: 80px;
     padding: 0 20px;
     font-size: 18px;
@@ -75,9 +68,97 @@ h1 {
 .menu-main a:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
+/*--------------------------------------------------*/
+.top-menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+ 
+}
+
+.menu-main a{
+    display: block;
+    padding: 30px;
+}
+
+.top-menu {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
+ 
+.hamb-line {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+ 
+} /* Style span tag */
+ 
+.hamb-line::before,
+.hamb-line::after{
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+ 
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ .top-menu{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+@media (min-width: 768px) {
+    .top-menu {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+    }
+    .menu-main li{
+        float: left;
+    }
+ 
+    .hamb{
+        display: none;
+    }
+}
   
   
-@media (max-width: 830px) {
+/* @media (max-width: 980px) {
 
     .menu-main {
         padding-top: 90px;
@@ -111,7 +192,7 @@ h1 {
     display: block
     }
 
-}
+} */
 
 /* .header-top .wrapper {
     display: flex;

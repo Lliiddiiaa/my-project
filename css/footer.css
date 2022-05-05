@@ -65,12 +65,18 @@ h3 {
     width: 22%;
 }
 
+
+.footer-middle {
+    display: flex;
+    width: 30%;
+}
+
 .footer-navigation {
-    width: 8%;
+    width: 50%;
 }
 
 .footer-products {
-    width: 11%;
+    width: 50%;
 }
 
 .mobile-buttons {
@@ -141,6 +147,7 @@ h3 {
     background-image: url('../img/icon-whats.png');
 }
 
+
 @media (max-width:941px) {
     
     .footer-bottom {
@@ -157,14 +164,15 @@ h3 {
         margin-left: 50%;
     }
 
+    .footer-middle {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    
     .footer-navigation,
     .footer-products {
         width: 20%;
-    }
-    
-    .footer-middle {
-        display: flex;
-        justify-content: space-around;
     }
 
     .social-media {
@@ -259,7 +267,7 @@ h3 {
     }
 }
 
-@media screen {
+@media (max-width:375px) {
 
     .social-btn {
         width: 150px;

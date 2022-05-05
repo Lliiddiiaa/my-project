@@ -146,6 +146,10 @@
         font-size: 14px !important;
     }
 
+    .back-page a::before {
+        height: 20px;
+    }
+
     .back-page {
         margin-left: 30%;
     }

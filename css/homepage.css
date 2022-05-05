@@ -70,19 +70,10 @@ h1 {
 } */
 /*--------------------------------------------------*/
 
-/* .header{
+.header{
     position: sticky;
     top: 0;
     width: 100%;
-} */
-
-@media (max-width:840px) {
-    .navbar-logo {
-        position: absolute;
-        left: 55%;
-        top: 5%;
-        transform: translate(-50%, -50%);
-    }
 }
 
 .navbar-logo {
@@ -95,7 +86,6 @@ h1 {
 .menu-main {
     margin-top: 45px;
     text-align: center;
-    margin-left: -90px;
 }
 
 .menu-main a {
@@ -106,14 +96,6 @@ h1 {
     font-weight: bold;
     color: white;
     transition: .3s linear;
-}
-
-.left-item {
-    float: left;
-}
-  
-.right-item {
-    float: right;
 }
 
 .top-menu {
@@ -140,7 +122,6 @@ h1 {
     padding-top: 17px;
     padding-left: 30px;
 }
-
 .hamb{
     cursor: pointer;
     padding: 40px 20px;

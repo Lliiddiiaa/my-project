@@ -30,7 +30,7 @@ h1 {
 
 /* .top-menu {
     position: relative;
-} */
+} 
   
 .menu-main {
     list-style: none;
@@ -55,7 +55,7 @@ h1 {
   
 .menu-main a {
     text-decoration: none;
-    /* display: block; */
+    display: block;
     line-height: 80px;
     padding: 0 20px;
     font-size: 18px;
@@ -67,8 +67,55 @@ h1 {
   
 .menu-main a:hover {
     background-color: rgba(0, 0, 0, 0.3);
-}
+} */
 /*--------------------------------------------------*/
+
+/* .header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+} */
+
+@media (max-width:840px) {
+    .navbar-logo {
+        position: absolute;
+        left: 55%;
+        top: 5%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.navbar-logo {
+    position: absolute;
+    left: 55%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-main {
+    margin-top: 45px;
+    text-align: center;
+    margin-left: -90px;
+}
+
+.menu-main a {
+    text-decoration: none;
+    line-height: 26px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: white;
+    transition: .3s linear;
+}
+
+.left-item {
+    float: left;
+}
+  
+.right-item {
+    float: right;
+}
+
 .top-menu {
     width: 100%;
     height: 100%;
@@ -88,11 +135,16 @@ h1 {
 }
 
 /* Menu Icon */
+
+.header-top .wrapper {
+    padding-top: 17px;
+    padding-left: 30px;
+}
+
 .hamb{
     cursor: pointer;
-    float: right;
     padding: 40px 20px;
-}/* Style label tag */
+}
  
 .hamb-line {
     background: white;

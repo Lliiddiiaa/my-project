@@ -1,5 +1,48 @@
+.header,
 .main {
     background-color: #F5ECE3;
+}
+
+.menu-main a {
+    color: #555555;
+}
+
+.hamb-line,
+.hamb-line::before,
+.hamb-line::after {
+    background: #555555;
+} 
+
+.logo {
+    background-image: url('../img/logo-black.png');
+}
+
+.back-page {
+    padding-top: 134px;
+}
+
+.header-slider {
+    display: none;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    color: #555555;
+    margin: 29px 0;
+}
+
+.icon-search {
+    background-image: url('../img/icon-search-black.png');
+}
+
+.icon-cart {
+    background-image: url('../img/icon-cart-black.png');
+}
+
+.icon-cabinet {
+    background-image: url('../img/icon-cabinet-black.png');
 }
 
 .main .wrapper {
@@ -100,6 +143,16 @@
 .position {
     font-size: 13px !important;
 }
+/*--------------------------------------?????
+@media (max-width:1028px) {
+    .top-menu {
+        background-color: #E3DAD0;
+    }
+
+    .hamb {
+        background-color: #E3DAD0;
+    }
+}*/
 
 @media (max-width: 800px) {
 

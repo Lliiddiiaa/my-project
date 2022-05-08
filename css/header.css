@@ -11,71 +11,218 @@
 .logo {
     width: 180px;
     height: 16px;
-}
-
-h1 {
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 120%;
-    color: #555555;
-    margin: 29px 0;
-}
-
-.header {
-    background-color: #F5ECE3;
-}
-
-.nav-icon {
-    width: 16px;
-    height: 16px;
-    background-position:center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.icon-search-black {
-    background-image: url('../img/icon-search-black.png');
+.main-icon {
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 25px;
 }
 
-.icon-cart-black {
-    background-image: url('../img/icon-cart-black.png');
+.main-icon a {
+    width: 25px;
+    height: 25px;
 }
 
-.icon-cabinet-black {
-    background-image: url('../img/icon-cabinet-black.png');
-}
-/*-------------------------*/
-.header-top .wrapper {
-    display: flex;
-    justify-content: space-between;
-    height: 121px;
-    align-items: center;
+.li .main-icon {
+    width: 25px;
+    height: 25px;
 }
 
-.nav ul {
-    display: flex;
-    list-style-type: none;
+.menu-main a {
+    font-size: 14px;
+    line-height: 120%;
 }
 
-.nav ul li{
-   height: 16px;
+.menu-main {
+    list-style: none;
+    padding: 0;
+}
+  
+.left-item {
+    float: left;
+}
+  
+.right-item {
+    float: right;
 }
 
-/*--------------------------*/
-.nav ul a{
+.navbar-logo {
+    position: absolute;
+    left: 50%;
+    top: 17%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-main {
+    padding-top: 45px;
+    /* text-align: center; */
+}
+
+.menu-main a {
     text-decoration: none;
-    font-size:14px;
-    line-height: 16.8px;
-    color: #555555;
+    line-height: 26px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: white;
+    transition: .3s linear;
+    padding: 30px;
+    font-size: 14px;
+    line-height: 120%;
 }
-/*-----------------------------*/
+ 
+.side-menu {
+    display: none;
+} 
 
-.nav ul li:first-child,
-.nav-left ul li:nth-child(2) {
-    margin-right: 48px;
+@media (max-width:1200px) {
+    .menu-main a {
+        padding: 20px !important;
+    }
 }
 
-.nav-icons {
-    display: flex;
-    justify-content: space-between;
-    width: 91px;
+@media (max-width:1028px) {
+    
+    .navbar-logo {
+        position: absolute;
+        left: 55%;
+        top: 5%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .menu-main {
+        /* margin-top: 45px; */
+        text-align: center;
+        display: block !important;
+    }
+    
+    .menu-main a {
+        text-decoration: none;
+        line-height: 26px;
+        font-size: 24px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        transition: .3s linear;
+    }
+    
+    .top-menu {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        overflow: hidden;
+     
+    }
+    
+    .menu-main a{
+        display: block;
+        padding: 30px;
+    }
+    
+    .top-menu {
+        max-height: 0;
+        transition: max-height .5s ease-out;
+    }
+    
+    .header-top .wrapper {
+        padding-top: 17px;
+        padding-left: 30px;
+    }
+
+    .hamb{
+        cursor: pointer;
+        padding: 40px 20px;
+    }
+     
+    .hamb-line {
+        display: block;
+        height: 2px;
+        position: relative;
+        width: 24px;
+    } 
+     
+    .hamb-line::before,
+    .hamb-line::after{
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+
+    .hamb-line::before{
+        top: 5px;
+    }
+
+    .hamb-line::after{
+        top: -5px;
+    }
+     
+    .side-menu {
+        display: none;
+    } 
+
+    .side-menu:checked ~ .top-menu{
+        max-height: 100%;
+    }
+    .side-menu:checked ~ .hamb .hamb-line {
+        background: transparent;
+    }
+    .side-menu:checked ~ .hamb .hamb-line::before {
+        transform: rotate(-45deg);
+        top:0;
+    }
+    .side-menu:checked ~ .hamb .hamb-line::after {
+        transform: rotate(45deg);
+        top:0;
+    }
+    
+    @media (min-width: 768px) {
+        .top-menu {
+            max-height: none;
+            top: 0;
+            position: relative;
+            float: right;
+            width: fit-content;
+        }
+        .menu-main li{
+            float: left;
+        }
+     
+        .hamb{
+            display: none;
+        }
+    }
+
 }
+
+@media (max-width:783px) {
+
+    .menu-main {
+        margin-right: 110px;
+        padding-top: 0 !important;
+    }
+
+    .main-icon {
+        display: none;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        left: 50% !important;
+        top: 10% !important;
+        transform: translate(-50%, -50%);
+    }
+
+    .left-item,
+    .right-item {
+        float:none !important;
+    }
+
+}
+

@@ -1,0 +1,63 @@
+.about_component .about-numbers {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-column-gap: 96px;
+    grid-row-gap: 67px;
+    margin: 67px 0;
+}
+
+.about_component .quote-card {
+    margin-top: 42px;
+}
+
+@media (max-width:1280px) {
+    
+    .about_component .about-numbers {
+        grid-column-gap: 80px;
+    }
+}
+
+@media (max-width:1152px) {
+    
+    .about_component .number-card h2 {
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .about_component .about-numbers {
+        grid-column-gap: 50px;
+    }
+
+    .about_component .number-card h2 {
+        font-size: 80px;
+    }
+
+}
+
+@media (max-width: 426px) {
+
+    .about_component .about-numbers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 33px;
+        grid-row-gap: 30px;
+    }
+
+    .about_component .number-card h2 {
+        font-weight: 300;
+        font-size: 66px;
+    }
+    
+}
+
+@media (max-width: 321px) {
+
+    .about_component .number-card h2 {
+        font-size: 59px;
+    }
+    
+}
+
+

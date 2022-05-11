@@ -1,0 +1,13 @@
+.quote-card {
+    margin-top: 42px;
+    margin-bottom: 70px;
+}
+
+.main-text,
+.video {
+    margin-bottom: 50px;
+}
+
+.video {
+    width: 100%;
+}

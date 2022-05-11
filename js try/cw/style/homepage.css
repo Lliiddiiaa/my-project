@@ -1,0 +1,439 @@
+.home_component .wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.home_component .logo-white { 
+    background-image: url('../img/logo.png');
+} /*-------------------------------------------------------------????*/
+
+
+.home_component .hamb-line,
+.home_component .hamb-line::before,
+.home_component .hamb-line::after{
+    background: white;
+}
+
+.home_component h1 {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.home_component .header {
+    background-image: url('../img/background-home.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home_component .menu-main a {
+    color: white;
+}
+
+.home_component .icon-search {
+    background-image: url('../img/icon-search.png');
+}
+
+.home_component .icon-cart {
+    background-image: url('../img/icon-cart.png');
+}
+
+.home_component .icon-cabinet {
+    background-image: url('../img/icon-cabinet.png');
+}
+
+.home_component .header-slider .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home_component .card-header-slider {
+    width: 87%;
+    height: 684px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_component .arrow {
+    background: rgba(136, 136, 136, 0.3);
+    backdrop-filter: blur(14px);
+    border-radius: 60px;
+    padding: 15px 23px;
+    cursor: pointer;
+}
+
+.home_component .header-slider-nav {
+    height: 95px;
+}
+
+
+.home_component .main {
+    background-color: #F5ECE3;
+}
+
+.home_component .catalog-grid {
+    display: grid;
+    grid-column-gap:20px;
+    grid-row-gap:30px;
+    grid-template-columns: 
+        repeat(auto-fill, minmax(310px, 1fr));
+    padding: 70px 0;
+}
+
+.home_component .catalog-grid-item {
+    background-color: #EEE4DA;
+    height: 430px;
+}
+
+.home_component .category-item {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 30px;
+    padding-right: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home_component .care-category {
+    background-image: url(../img/care-card.png);
+}
+
+.home_component .beauty-category {
+    background-image: url(../img/beauty-card.png);
+}
+
+.home_component .brows-category {
+    background-image: url(../img/brows-card.png);
+}
+
+.home_component .category-desc {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home_component .arrows {
+    background: rgba(136, 136, 136, 0.3);
+    backdrop-filter: blur(14px);
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.home_component .category-desc .arrow-right {
+    margin-left: 18px;
+}
+
+.home_component .category-desc p {
+    font-size: 48px;
+    line-height: 120%;
+    margin-bottom: 23px;
+}
+
+.home_component .catalog-grid-item {
+    display: flex;
+    align-items: flex-end;
+    padding:24px 21px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home_component .card-description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.home_component .cat-item1,
+.home_component .cat-item6,
+.home_component .cat-item9 {
+    background-image: url(../img/goods1.png);
+}
+
+.home_component .cat-item2,
+.home_component .cat-item5,
+.home_component .cat-item7 {
+    background-image: url(../img/goods2.svg);
+}
+
+.home_component .cat-item3,
+.home_component .cat-item4,
+.home_component .cat-item8 {
+    background-image: url(../img/goods3.png);
+}
+
+.home_component .about-col2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_component .content-wrapper {
+    width: 73%;
+}
+
+.home_component .about .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #555555;
+}
+
+.home_component .about_logo {
+    margin-bottom: 67px;
+}
+
+.home_component .quote {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    margin-bottom: 34px;
+}
+
+.home_component .description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    margin-bottom: 44px;
+}
+
+.home_component .signature {
+    display: flex;
+}
+
+.home_component .signature-desription {
+    margin-right: 35px;
+}
+
+.home_component .name {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+}
+
+.home_component .position {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+}
+
+.home_component .instagram-quote {
+    display: flex;
+    justify-content:space-between;
+    padding-top: 137px;
+    padding-bottom: 100px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color:#555555;
+}
+
+.home_component .instagram-quote p {
+    width: 540px;
+}
+
+.home_component .insta-button-wrapper {
+    display: flex;
+    align-items: flex-end;
+}
+
+.home_component .insta-button-wrapper a{
+    text-decoration: none;
+    color: #555555;
+    font-weight: 400;
+    line-height: 24px;
+    background-color: #EEE4DA;
+    backdrop-filter: blur(14px);
+    border-radius: 66px;
+    padding: 28px 99px;
+}
+
+.home_component .insta-button-wrapper a::before{
+    content: "";
+    position: relative;
+    float: left;
+    margin: 2px 5px 0 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/icon-insta-btn.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home_component .instagram-grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 
+        repeat(auto-fill, minmax(300px, 1fr));
+    padding-bottom: 127px;
+}
+
+@media (max-width:1152px) {
+    
+    .home_component .inst-item7,
+    .home_component .inst-item8 {
+        margin-left: 55%;
+    }
+}
+
+@media (max-width:1024px) {
+    
+    .home_component .inst-item7,
+    .home_component .inst-item8 {
+        margin-left:0;
+    }
+
+    .home_component .about-col2 {
+        margin-top: 60px;
+    }
+
+    .home_component .about-col1 {
+        display: flex;
+        align-items: center;
+    }
+
+    .home_component .about-col1 img{
+        width: 400px;
+        height: 420px;
+    }
+
+    .home_component .instagram-quote {
+        font-size: 32px;
+    }
+}
+
+@media (max-width:800px) {
+
+    .home_component .insta-button-wrapper a {
+            padding: 24px 35px;
+        }
+
+    .home_component.insta-button-wrapper a::before {
+        margin: 0px 5px 0 0;
+    }
+}
+
+@media (max-width:768px) {
+    
+    .home_component h1 {
+        font-size: 36px;
+    }
+
+    .home_component .quote {
+        font-size: 22px;
+    }
+
+    .home_component .description {
+        font-size: 16px;
+    }
+
+    .home_component .name {
+        font-size: 24px;
+    }
+
+    .home_component .position {
+        font-size: 13px;
+    } 
+
+    .home_component .instagram-quote {
+        font-size: 30px;
+    }
+
+    .home_component .insta-button-wrapper a {
+        width: 345px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home_component .instagram-quote {
+        display: inline-block;
+    }
+
+    .home_component .instagram-quote p {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .home_component .insta-button-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .home_component .inst-item5,
+    .home_component .inst-item6,
+    .home_component .inst-item7,
+    .home_component .inst-item8 {
+        display: none;
+    }
+
+    
+    .home_component .about .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .home_component .about-col1 {
+        grid-column: 1;
+        grid-row: 2;
+        justify-content: center;
+    }
+
+    .home_component .about-col2 {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 40px auto;
+    }
+
+    .home_component .instagram-grid-item img {
+        width: 164px;
+        height: 164px;
+    }
+
+    .home_component .instagram-grid {
+        display: grid;
+        grid-gap: 9px;
+        grid-template-columns: 
+            repeat(auto-fill, minmax(164px, 1fr));
+        padding-bottom: 127px;
+    }
+
+    
+}
+
+@media (max-width:426px) {
+    
+    .home_component .arrow {
+        display: none;
+    }
+
+    .home_component .about-col1 img{
+        width: 100%;
+    }
+
+    .home_component .instagram-quote p {
+        text-align: left;
+        width: 90%;
+    }
+
+    .home_component .insta-button-wrapper a {
+        width: 75%;
+    }
+}
+
+@media (max-width:426px) { 
+
+    .home_component .wrapper {
+        width: 100%;
+    }
+}

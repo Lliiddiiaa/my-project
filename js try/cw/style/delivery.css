@@ -1,0 +1,33 @@
+.delivery_component .main li {
+    color: #555555;
+    font-size: 20px;
+    line-height: 250%;
+}
+
+.delivery_component .back-page p {
+    font-weight: 400 !important;
+}
+
+.delivery_component .main .wrapper p {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.delivery_component .bc-img {
+    margin-top: 0 !important;
+}
+
+@media (max-width:800px) {
+
+    .delivery_component ul {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width:321px) {
+
+    .delivery_component .main li {
+    color: #555555;
+    font-size: 16px; 
+    }
+}

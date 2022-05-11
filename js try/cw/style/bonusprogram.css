@@ -1,0 +1,26 @@
+.bonus_component .loyalty-numbers {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-column-gap: 96px;
+    margin: 67px 0;
+}
+
+
+.bonus_component .bc-img {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+@media (max-width:1000px) {
+
+    .bonus_component .loyalty-numbers {
+        display: block;
+    }
+
+    .bonus_component .number-card {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+}

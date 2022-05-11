@@ -107,6 +107,7 @@
 .contacts_component .request-col1 {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .contacts_component .logo-input {

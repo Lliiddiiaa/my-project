@@ -8,7 +8,7 @@ function Catalog(){
     elem.innerHTML = `<h1>Catalog</h1>`
     const container = document.createElement('div');
     container.classList.add('catalog_container');
-    let dataDb = []; //Есть два варианта, либо использовать локальное храниище, либо использовать прелоадер
+    let dataDb = []; 
 
     const render = async (dataDb) => {
         let spin = spinner();
@@ -16,28 +16,28 @@ function Catalog(){
         let localCard = localStorage.getItem('card');
         localCard = JSON.parse(localCard);
 
-        dataDb = await catalogData();
+        data = await catalogData();
         container.removeChild(spin);
         console.log(dataDb);
-        console.log(dataDb.data);
-        dataDb.forEach(data => {
+        console.log(dataDb.data);  
+        data.forEach(d => {
             let productCard = document.createElement('div');
             productCard.classList.add('card');
             let imgLinc = document.createElement('a');
-            imgLinc.setAttribute('href', `#catalog/${data.id}`);
+            imgLinc.setAttribute('href', `#catalog/${d.id}`);
             let img = document.createElement('img');
             img.classList.add('card_img');
-            img.setAttribute('src', dataDb.data.img);
+            img.setAttribute('src', d.data.img);
             imgLinc.append(img);
             let titleLinc = document.createElement('a');
             titleLinc.setAttribute('href', `#catalog/${dataDb.id}`);
-            titleLinc.innerText = dataDb.name;
+            titleLinc.innerText = d.data.name;
             let title = document.createElement('h2');
             title.classList.add('card_title');
             title.append(titleLinc)
             let priceCard = document.createElement('p');
             priceCard.classList.add('card_price');
-            priceCard.innerText = dataDb.price;
+            priceCard.innerText = d.data.price;
             let btnAdd = document.createElement('button');
             if (localCard && localCard.some(d => d.id === data.id)){
                 btnAdd.innerText = 'Added';

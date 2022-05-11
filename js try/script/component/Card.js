@@ -50,7 +50,7 @@ function Card(){
             cardItems.append(cardItem)
         })
 
-        console.log(this.prices);
+        // console.log(this.prices);
         totalPrice.innerText = `${this.prices.reduce((count, item) => count + item, 0).toFixed(2)} $`;
         elem.append(cardItems, totalPrice);
         return elem;

@@ -1,4 +1,5 @@
 
+
 // Import the functions you need from the SDKs you need
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
@@ -52,7 +53,7 @@ async function catalogData(){
     }
     console.log(dataDb);
     
-    return dataDb;
+    return data;
 }
 
 async function itemApi(id){

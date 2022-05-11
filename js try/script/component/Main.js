@@ -19,7 +19,7 @@ function Main(){
         import(`./${hash}.js`)
             .then(module => {
                 elem.innerHTML = '';
-                console.log(module);
+                // console.log(module);
                 elem.append(module.default);
                 document.title = module.title;
             });

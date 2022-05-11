@@ -13,6 +13,7 @@
 .contacts_component .wrapper-heading {
     display: flex;
     justify-content:center;
+    width: 100%;
 }
 
 .contacts_component .contacts-bg {

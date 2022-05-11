@@ -10,7 +10,7 @@ function Catalog(){
     container.classList.add('catalog_container');
     let dataDb = []; 
 
-    const render = async (dataDb) => {
+    const render = async (data) => {
         let spin = spinner();
         container.append(spin);
         let localCard = localStorage.getItem('card');

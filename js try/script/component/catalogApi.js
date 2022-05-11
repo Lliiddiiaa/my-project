@@ -34,12 +34,7 @@ const root = document.getElementById('app');
 //--------------------------------
 
 async function catalogData(){
-    // let data = [];
-    // return await fetch('https://fakestoreapi.com/products/')
-    //     .then(resp => resp.json())
-    //     .then(data => {
-    //         return data;
-    //     })
+
     const queryDoc = await getDocs(collection(db, 'boltaeva-shop-firebase'));
     let dataDb = [];
     queryDoc.forEach(doc => {
@@ -51,7 +46,7 @@ async function catalogData(){
     if (data.length === 0){
         data = dataDb;
     }
-    console.log(dataDb);
+    // console.log(data);
     
     return data;
 }
@@ -65,53 +60,3 @@ async function itemApi(id){
 }
 
 export {catalogData, itemApi}
-
-
-//------------------------------------------
-
-
-
-// async function getData(){
-//     const queryDoc = await getDocs(collection(db, 'boltaeva-shop-firebase'));
-//     let dataDb = [];
-//     queryDoc.forEach(doc => {
-//         dataDb.push({
-//             id: doc.id,
-//             data: doc.data(),
-//         });
-//     });
-//     if (data.length === 0){
-//         data = dataDb;
-//     }
-
-//     render();
-// }
-
-// function render(){
-//     root.innerHTML = '';
-//     let container = document.createElement('div');
-//     let ul = document.createElement('ul');
-//     data.forEach(d => {
-//         let li = document.createElement('li');
-//         let card = document.createElement('div');
-//         card.style.backgroundColor = "black";
-//         card.style.width = "300px";
-//         card.style.height = "500px";
-//         let img = document.createElement('img');
-//         img.setAttribute('src', d.data.img);
-//         img.setAttribute('alt', '#');
-//         card.append(img);
-//         let name = document.createElement('h1');
-//         name.innerText = d.data.name;
-//         let description = document.createElement('span');
-//         description.innerText = d.data.description;
-//         let price = document.createElement('span');
-//         price.innerText = d.data.price;
-//         li.append(card, description, price, name);
-//         ul.append(li);
-//     });
-//     container.append(ul);
-//     root.append(container);
-// }
-
-// getData();

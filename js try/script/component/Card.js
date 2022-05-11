@@ -57,8 +57,9 @@ function Card(){
     }
 
     this.cardWidget = () => {
-        let elem = document.createElement('div');
+        let elem = document.createElement('li');
         elem.classList.add('card_widget');
+        elem.classList.add('right-item');
         elem.innerHTML = `
             <a href="#card">Card</a>
             <span>${this.card.length}</span>

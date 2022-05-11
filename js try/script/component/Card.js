@@ -29,9 +29,21 @@ function Card(){
                     <h2>${data.title}</h2>
                 </div>
             `
+            // this.card.forEach(data => {
+            //     let cardItem = document.createElement('div');
+            //     cardItem.classList.add('card_item');
+            //     cardItem.innerHTML = `
+            //         <div class="item_image">
+            //             <img src="${d.data.img}" alt="#">
+            //         </div>
+            //         <div>
+            //             <h2>${d.data.name}</h2>
+            //         </div>
+            //     `
 
             let tPrice = document.createElement('div');
             tPrice.classList.add('t_price');
+            // tPrice.innerText = `${d.data.price * (data.count ? data.count : 1)}$`;
             tPrice.innerText = `${data.price * (data.count ? data.count : 1)}$`;
             this.prices.push(parseFloat(tPrice.innerText));
             let counter = document.createElement('input');

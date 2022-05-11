@@ -1,8 +1,17 @@
+.catalog_component {
+    background-color: #F5ECE3;
+}
+
+.catalog_component .wrapper {
+    padding-top: 52px;
+}
+
 .filters-nav {
     background-color:#EEE4DA;
     display: flex;
     justify-content: center;
     padding: 14px 0;
+    width: 100%;
 }
 
 .filters-nav button {
@@ -15,7 +24,7 @@ h1 {
     text-align: center;
 }
 
-.main .wrapper {
+.catalog_component .main .wrapper {
     width: 92%;
 }
 
@@ -39,6 +48,15 @@ h1 {
     padding:24px 21px;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+.catalog-grid-item img {
+    width: 280px;
+    height: 320px;
+    position: absolute;
+    top: 30px;
+    left: 15px;
 }
 
 .card-description {
@@ -130,4 +148,8 @@ h1 {
     font-weight: 400;
     font-size: 13px;
     line-height: 130%;
+}
+
+.infoblock2 {
+    padding-bottom: 70px;
 }

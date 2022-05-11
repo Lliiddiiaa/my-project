@@ -82,6 +82,7 @@
     grid-template-columns: 
         repeat(auto-fill, minmax(310px, 1fr));
     padding: 70px 0;
+    width: 100%;
 }
 
 .home_component .catalog-grid-item {

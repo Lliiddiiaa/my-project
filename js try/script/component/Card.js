@@ -1,3 +1,5 @@
+
+
 function Card(){
     this.card = [];
     this.totalPrice = 0;
@@ -13,7 +15,7 @@ function Card(){
     const totalPrice = document.createElement('div');
     totalPrice.classList.add('total_price');
 
-    this.render = () => {
+    this.render = (data) => {
         cardItems.innerHTML = '';
         this.prises = [];
         this.card.forEach(data => {
@@ -61,7 +63,6 @@ function Card(){
         elem.classList.add('card_widget');
         elem.classList.add('right-item');
         elem.innerHTML = `
-            <a href="#card">Card</a>
             <span>${this.card.length}</span>
         `
 

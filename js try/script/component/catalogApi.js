@@ -31,7 +31,7 @@ let data = [];
 const root = document.getElementById('app');
 
 
-//--------------------------------
+
 
 async function catalogData(){
 
@@ -51,7 +51,7 @@ async function catalogData(){
     return data;
 }
 
-async function itemApi(id){
+async function itemApi(id){ //-------------------------------------------------????
     return await fetch(`https://fakestoreapi.com/products/${id}`)
         .then(resp => resp.json())
         .then(data => {

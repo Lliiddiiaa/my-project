@@ -17,7 +17,7 @@ function Header(){
                             <li class="left-item"><a href="#delivery">Delivery</a></li>
                             <li class="right-item"><a href="#contacts">Contacts</a></li>
                             <li class="right-item main-icon icon-search"><a href=""></a></li>
-                            <li class="right-item main-icon icon-cart"><a href=""> ${widget.outerHTML}</a></li>
+                            <li class="right-item main-icon icon-cart"><a href="#card"> ${widget.outerHTML}</a></li>
                             <li class="right-item main-icon icon-cabinet"><a href=""></a></li>
                         </ul>
                     </nav>

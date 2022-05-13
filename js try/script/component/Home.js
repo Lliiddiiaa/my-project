@@ -2,6 +2,8 @@ function Home(){
     this.title ='Home'
     const header = document.querySelector('header');
     header.classList.add('home_header');
+    // const homeLogo = document.querySelector('logo');
+    // homeLogo.classList.add('logo-white');
     const homeSlider = document.getElementById('home-slider');
     console.log(homeSlider)
     homeSlider.classList.add('home_slider');

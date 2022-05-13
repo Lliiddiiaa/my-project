@@ -3,8 +3,12 @@ import spinner from "./spinner.js";
 
 function Catalog(){
     this.title = 'Catalog'
-    // const homeSlider = document.getElementById('home-slider');
-    // homeSlider.classList.remove('home_slider');
+     // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
+     const header = document.querySelector('header');
+     header.classList.remove('home_header');
+     const homeSlider = document.getElementById('home-slider');
+     homeSlider.classList.remove('home_slider');
+     // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
     const elem = document.createElement('div');
     elem.classList.add('catalog_component');
     // elem.innerHTML = `<h1>Catalog</h1>`

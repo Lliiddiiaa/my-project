@@ -2,6 +2,8 @@ function About(){
     this.title = 'About'
     
     // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
+    const header = document.querySelector('header');
+    header.classList.remove('home_header');
     const homeSlider = document.getElementById('home-slider');
     homeSlider.classList.remove('home_slider');
     // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ

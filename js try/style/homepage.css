@@ -1,3 +1,5 @@
+
+
 .home_component .wrapper {
     width: 90%;
     margin: 0 auto;
@@ -44,11 +46,11 @@
     background-image: url('../img/icon-cabinet.png');
 }
 
-.home-slider {
+.home_slider {
     display: flex;
 }
 
-.home-slider .wrapper {
+.home_slider .wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;

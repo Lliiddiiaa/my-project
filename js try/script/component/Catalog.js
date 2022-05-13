@@ -3,6 +3,8 @@ import spinner from "./spinner.js";
 
 function Catalog(){
     this.title = 'Catalog'
+    // const homeSlider = document.getElementById('home-slider');
+    // homeSlider.classList.remove('home_slider');
     const elem = document.createElement('div');
     elem.classList.add('catalog_component');
     // elem.innerHTML = `<h1>Catalog</h1>`

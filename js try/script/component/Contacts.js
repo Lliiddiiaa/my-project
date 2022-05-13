@@ -1,5 +1,7 @@
 function Contacts(){
     this.title = 'Contacts'
+    // const homeSlider = document.getElementById('home-slider');
+    // homeSlider.classList.remove('home_slider');
     const elem = document.createElement('div');
     elem.classList.add('contacts_component');
     elem.innerHTML = `

@@ -3,6 +3,7 @@ import spinner from "./spinner.js";
 import {addCard} from "./Card.js";
 
 function Catalog(){
+    
     const elem = document.createElement('div');
     elem.classList.add('item_component');
     let data = {};

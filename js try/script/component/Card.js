@@ -1,6 +1,17 @@
 
 
 function Card(){
+    
+    // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
+    // SliderHelp();
+    // function SliderHelp() {
+    //     let homeSlider = document.getElementById('home-slider');
+    //     if (homeSlider===null) (break);
+    //     if(homeSlider) homeSlider.classList.remove('home_slider');
+    // }
+    
+    // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
+
     this.card = [];
     this.totalPrice = 0;
     this.prices = [];

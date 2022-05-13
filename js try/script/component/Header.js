@@ -24,7 +24,7 @@ function Header(){
                     <a class="logo logo-white navbar-logo" href="\"></a>
                 </div>
             </div>
-            <div class="header-slider">
+            <div class="header-slider" id="home-slider">
                 <div class="wrapper">
                     <div class="arrow arrow-left"><img src="./img/arrow-left.png" alt="arrow-left"></div>
                     <div class="card-header-slider">

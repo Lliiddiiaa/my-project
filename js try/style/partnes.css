@@ -1,18 +1,15 @@
-.bc-img {
+.partners_component .bc-img {
     margin: 56px 0;
-}
-
-.bc-img {
     margin-top: 0;
     margin-bottom: 50px;
 }
 
-.btn-wrapper {
+.partners_component .btn-wrapper {
     display: flex;
     justify-content: center;
 }
 
-.btn-partner {
+.partners_component .btn-partner {
     background-color: #EEE4DA;
     font-size: 20px;
     line-height: 120%;
@@ -28,17 +25,17 @@
     cursor: pointer;
 }
 
-.quote-text {
+.partners_component .quote-text {
     margin-bottom: 42px;
 }
 
 
-.btn-partner p {
+.partners_component .btn-partner p {
     width: 195px;
     margin: 0 auto;
 }
 
-.btn-partner p::after {
+.partners_component .btn-partner p::after {
     content: "";
     position: relative;
     float: right;

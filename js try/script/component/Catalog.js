@@ -81,13 +81,15 @@ function Catalog(){
             let CatalogGridItem = document.createElement('div');
             CatalogGridItem.classList.add('catalog-grid-item');
             let imgLinc = document.createElement('a');
-            imgLinc.setAttribute('href', `#productcard/${d.id}`); //тут стоит, все таки, написать productcard а не card
+            imgLinc.setAttribute('href', `#productcard/${d.id}`); 
             let img = document.createElement('img');
             img.classList.add('card_img');
             img.setAttribute('src', d.data.img);
             imgLinc.append(img);
+            let cardDesc = document.createElement('div');
+            cardDesc.classList.add('card_description');
             let titleLinc = document.createElement('a');
-            titleLinc.setAttribute('href', `#productcard/${d.id}`); //тут стоит, все таки, написать productcard а не card
+            titleLinc.setAttribute('href', `#productcard/${d.id}`); 
             titleLinc.innerText = d.data.name;
             let title = document.createElement('h2');
             title.classList.add('card_title');
@@ -97,6 +99,7 @@ function Catalog(){
             priceCard.innerText = d.data.price;
 
             let btnAdd = document.createElement('button');
+            btnAdd.classList.add('btn-catalog-add');
             if (localCard && localCard.some(d => d.id === d.id)){
                 btnAdd.innerText = 'Added';
                 btnAdd.disabled = true;
@@ -104,7 +107,9 @@ function Catalog(){
                 btnAdd.innerText = 'Add';
             }
 
-            CatalogGridItem.append(imgLinc, title, priceCard, btnAdd);
+
+            cardDesc.append(title,priceCard);
+            CatalogGridItem.append(imgLinc, cardDesc, btnAdd);
             catalogGrid.append(CatalogGridItem);
             
             btnAdd.addEventListener('click', () => {

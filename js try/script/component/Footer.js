@@ -30,11 +30,11 @@ function Footer(){
                 <div class="footer-navigation">
                     <h3>Navigation</h3>
                     <ul>
-                        <li><a href="">Product catalog</a></li>
-                        <li><a href="">About company</a></li>
-                        <li><a href="">Bonus program</a></li>
-                        <li><a href="">Work process</a></li>
-                        <li><a href="">Partners</a></li>
+                        <li><a href="#catalog">Product catalog</a></li>
+                        <li><a href="#about">About company</a></li>
+                        <li><a href="#bonusprogram">Bonus program</a></li>
+                        <li><a href="#workprocess">Work process</a></li>
+                        <li><a href="#partners">Partners</a></li>
                         <li><a href="">Privacy Policy</a></li>
                     </ul>
                 </div>

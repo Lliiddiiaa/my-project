@@ -55,7 +55,10 @@ h1 {
 .about_component .main p, /*----------------------------------------------дописать сюда странички*/
 .bonus_component .main p,
 .partners_component .main p,
-.delivery_component .main p {
+.delivery_component .main p
+.workprocess_component .main p,
+.partners_component .main p,
+.bonusprogram_component .main p {
     color: #555555;
     font-size: 20px;
     line-height: 180%;

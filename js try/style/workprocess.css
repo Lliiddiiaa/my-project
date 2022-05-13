@@ -1,13 +1,19 @@
-.quote-card {
+.workprocess_component .quote-card {
     margin-top: 42px;
     margin-bottom: 70px;
 }
 
-.main-text,
-.video {
+.workprocess_component .main-text,
+.workprocess_component .video {
     margin-bottom: 50px;
 }
 
-.video {
+.workprocess_component .video {
     width: 100%;
+}
+
+.workprocess_component .main p {
+    color: #555555;
+    font-size: 20px;
+    line-height: 180%;
 }

@@ -51,6 +51,14 @@ h1 {
     position: relative;
 }
 
+.catalog-grid-item:hover .btn-catalog-add {
+    display: block;
+}
+
+.catalog-grid-item:hover .card_price {
+    display: none;
+}
+
 .catalog_component .catalog-grid-item img {
     width: 280px;
     height: 320px;
@@ -59,10 +67,33 @@ h1 {
     left: 15px;
 }
 
-.card-description {
+.card_description {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.card_description a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 20px;
+    line-height: 180%;
+}
+
+.card_description h2,
+.card_description p {
+    color: #555555;
+    font-size: 20px;
+    line-height: 180%;
+}
+
+.btn-catalog-add {
+    background-color: #f6cab2;
+    color: #555555;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    display: none;
 }
 
 .cat-item1,

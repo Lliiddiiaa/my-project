@@ -7,9 +7,9 @@ function Home(){
     // console.log(homeLogo)
     homeLogo.classList.add('logo-white');
     const homeSlider = document.getElementById('home-slider');
-    console.log(homeSlider)
+    // console.log(homeSlider)
     homeSlider.classList.add('home_slider');
-    console.log(header);
+    // console.log(header);
     const elem = document.createElement('div');
     elem.classList.add('home_component');
     elem.innerHTML = `

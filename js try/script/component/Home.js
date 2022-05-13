@@ -118,7 +118,6 @@ function Home(){
             </div>
         </div>
     `
-    mainHome.append(sectionAbout);
     
     const sectionInsta = document.createElement('section');
     sectionInsta.classList.add('instagram');
@@ -158,7 +157,7 @@ function Home(){
                 </div>
             </div>
         `
-    mainHome.append(sectionInsta);
+    mainHome.append(sectionAbout, sectionInsta);
             
                 // <div class="catalog-grid-item category-item care-category">
                 //     <div class="category-desc">

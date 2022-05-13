@@ -1,4 +1,5 @@
 function About(){
+
     this.title = 'About'
     
     // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
@@ -6,6 +7,9 @@ function About(){
     header.classList.remove('home_header');
     const homeSlider = document.getElementById('home-slider');
     homeSlider.classList.remove('home_slider');
+    const homeLogo = document.getElementById('logo-header');
+    // console.log(homeLogo)
+    homeLogo.classList.remove('logo-white');
     // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
     const elem = document.createElement('div');
     elem.classList.add('about_component');

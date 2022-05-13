@@ -21,7 +21,7 @@ function Header(){
                             <li class="right-item main-icon icon-cabinet"><a href=""></a></li>
                         </ul>
                     </nav>
-                    <a class="logo navbar-logo" href="\"></a>
+                    <a class="logo navbar-logo" id="logo-header" href="\"></a>
                 </div>
             </div>
             <div class="header-slider" id="home-slider">

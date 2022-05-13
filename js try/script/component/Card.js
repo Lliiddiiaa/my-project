@@ -2,15 +2,16 @@
 
 function Card(){
     
-    // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
-    // SliderHelp();
-    // function SliderHelp() {
-    //     let homeSlider = document.getElementById('home-slider');
-    //     if (homeSlider===null) (break);
-    //     if(homeSlider) homeSlider.classList.remove('home_slider');
-    // }
+    // ----------------------------------------------------------------не находит элементы вообще
+    // const header = document.querySelector('header');
+    // header.classList.remove('home_header');
+    // const homeSlider = document.getElementById('home-slider');
+    // homeSlider.classList.remove('home_slider');
+    // const homeLogo = document.getElementById('logo-header');
+    // // console.log(homeLogo)
+    // homeLogo.classList.remove('logo-white');
     
-    // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
+    // ----------------------------------------------------------------
 
     this.card = [];
     this.totalPrice = 0;

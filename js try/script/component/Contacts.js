@@ -1,7 +1,16 @@
 function Contacts(){
     this.title = 'Contacts'
-    // const homeSlider = document.getElementById('home-slider');
-    // homeSlider.classList.remove('home_slider');
+
+
+    const header = document.querySelector('header');
+    header.classList.remove('home_header');
+    const homeSlider = document.getElementById('home-slider');
+    homeSlider.classList.remove('home_slider');
+    const homeLogo = document.getElementById('logo-header');
+    // console.log(homeLogo)
+    homeLogo.classList.remove('logo-white');
+
+
     const elem = document.createElement('div');
     elem.classList.add('contacts_component');
     elem.innerHTML = `

@@ -1,11 +1,14 @@
 function Delivery(){
     this.title = 'Delivery'
-     // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
-     const header = document.querySelector('header');
-     header.classList.remove('home_header');
-     const homeSlider = document.getElementById('home-slider');
-     homeSlider.classList.remove('home_slider');
-     // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
+    // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
+    const header = document.querySelector('header');
+    header.classList.remove('home_header');
+    const homeSlider = document.getElementById('home-slider');
+    homeSlider.classList.remove('home_slider');
+    const homeLogo = document.getElementById('logo-header');
+    // console.log(homeLogo)
+    homeLogo.classList.remove('logo-white');
+    // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
     const elem = document.createElement('div');
     elem.classList.add('delivery_component');
     elem.innerHTML = `

@@ -1,9 +1,11 @@
 function Home(){
     this.title ='Home'
+    console.log('Рисуем страницу хоум')
     const header = document.querySelector('header');
     header.classList.add('home_header');
-    // const homeLogo = document.querySelector('logo');
-    // homeLogo.classList.add('logo-white');
+    const homeLogo = document.getElementById('logo-header');
+    // console.log(homeLogo)
+    homeLogo.classList.add('logo-white');
     const homeSlider = document.getElementById('home-slider');
     console.log(homeSlider)
     homeSlider.classList.add('home_slider');

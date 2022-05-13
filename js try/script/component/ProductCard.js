@@ -3,6 +3,14 @@ import spinner from "./spinner.js";
 import {addCard} from "./Card.js";
 
 function Catalog(){
+    //не находит элементы
+    // const header = document.querySelector('header');
+    // header.classList.remove('home_header');
+    // const homeSlider = document.getElementById('home-slider');
+    // homeSlider.classList.remove('home_slider');
+    // const homeLogo = document.getElementById('logo-header');
+    // // console.log(homeLogo)
+    // homeLogo.classList.remove('logo-white');
     
     const elem = document.createElement('div');
     elem.classList.add('item_component');

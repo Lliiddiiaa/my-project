@@ -59,7 +59,7 @@ h1 {
     display: none;
 }
 
-.catalog_component .catalog-grid-item img {
+.catalog-grid-item img {
     width: 280px;
     height: 320px;
     position: absolute;

@@ -4,7 +4,7 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js";
-import { collection, getDocs, addDoc, doc, updateDoc, deleteDoc, getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js';
+import { collection, getDocs, addDoc, doc, updateDoc, deleteDoc, getFirestore, getDoc } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js';
 
 const firebaseConfig = {
     apiKey: "AIzaSyD09g__xhneIStnn-Fo908RR1n0tjm_8dw",
@@ -52,11 +52,12 @@ async function catalogData(){
 }
 
 async function itemApi(id){ //-------------------------------------------------????
-    return await fetch(`https://fakestoreapi.com/products/${id}`)
-        .then(resp => resp.json())
-        .then(data => {
-            return data;
-        })
+    // return await fetch(`https://fakestoreapi.com/products/${id}`)
+    //     .then(resp => resp.json())
+    //     .then(data => {
+    //         return data;
+    //     })
+    return await getDoc(doc(db, 'boltaeva-shop-firebase', id))
 }
 
 export {catalogData, itemApi}

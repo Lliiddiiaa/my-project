@@ -1,5 +1,11 @@
 function Home(){
     this.title ='Home'
+    const header = document.querySelector('header');
+    header.classList.add('home_header');
+    const homeSlider = document.querySelector('header-slider');
+    console.log(homeSlider)
+    homeSlider.classList.add('home_slider');
+    console.log(header);
     const elem = document.createElement('div');
     elem.classList.add('home_component');
     elem.innerHTML = `

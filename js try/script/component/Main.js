@@ -11,11 +11,13 @@ function Main(){
             elem.innerHTML = ''
             let index = hash.indexOf('/');
             let id = hash.slice(index + 1);
-            let item = await product.render(id);
+            let item = await product.ren(id);
+            hash = hash.slice(0, index);
             document.title = product.title;
             // console.log(item);
             elem.append(item);
         }
+        if (hash === 'productcard') return;
         import(`./${hash}.js`)
             .then(module => {
                 elem.innerHTML = '';

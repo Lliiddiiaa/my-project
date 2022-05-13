@@ -72,13 +72,13 @@ function Catalog(){
             let CatalogGridItem = document.createElement('div');
             CatalogGridItem.classList.add('catalog-grid-item');
             let imgLinc = document.createElement('a');
-            imgLinc.setAttribute('href', `#catalog/${d.id}`);
+            imgLinc.setAttribute('href', `#productcard/${d.id}`); //тут стоит, все таки, написать productcard а не card
             let img = document.createElement('img');
             img.classList.add('card_img');
             img.setAttribute('src', d.data.img);
             imgLinc.append(img);
             let titleLinc = document.createElement('a');
-            titleLinc.setAttribute('href', `#catalog/${d.id}`);
+            titleLinc.setAttribute('href', `#productcard/${d.id}`); //тут стоит, все таки, написать productcard а не card
             titleLinc.innerText = d.data.name;
             let title = document.createElement('h2');
             title.classList.add('card_title');
@@ -101,7 +101,7 @@ function Catalog(){
             btnAdd.addEventListener('click', () => {
                 import('./Card.js')
                     .then(module => {
-                        if (module.addCard(data)){
+                        if (module.addCard(d)){
                             btnAdd.innerText = 'Added';
                             btnAdd.disabled = true;
                         }

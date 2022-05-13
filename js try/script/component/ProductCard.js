@@ -18,30 +18,31 @@ function Catalog(){
         localCard = JSON.parse(localCard);
 
         data = await itemApi(id);
+        data = data.data();
         elem.innerHTML = '';
 
         let productCard = document.createElement('div');
         productCard.classList.add('card_item');
         let img = document.createElement('img');
         img.classList.add('item_img');
-        img.setAttribute('src', data.image);
+        img.setAttribute('src', data.img);
         let desc = document.createElement('p');
         desc.innerText = data.description;
         let category = document.createElement('p');
         category.innerText = data.category;
         let title = document.createElement('h2');
         title.classList.add('card_title');
-        title.innerText = data.title;
+        title.innerText = data.name;
         let priceCard = document.createElement('p');
         priceCard.classList.add('card_price');
         priceCard.innerText = data.price;
         let btnAdd = document.createElement('button');
-        if (localCard.some(data => data.id === +id)){
-            btnAdd.innerText = 'Added';
-            btnAdd.disabled = true;
-        }else{
-            btnAdd.innerText = 'Add';
-        }
+        // if (localCard.some(data => data.id === +id)){ // просмотрите структуру объекта дата и перепишите условие
+        //     btnAdd.innerText = 'Added';
+        //     btnAdd.disabled = true;
+        // }else{
+        //     btnAdd.innerText = 'Add';
+        // }
         elem.append(title, category, img, desc, priceCard, btnAdd);
         // console.log(data);
         // Добавить кнопку "В корзину"
@@ -53,7 +54,7 @@ function Catalog(){
             }
         })
 
-        // return elem;
+        return elem;
     }
 
     // render();

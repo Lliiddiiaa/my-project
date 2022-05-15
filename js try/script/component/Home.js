@@ -44,53 +44,175 @@ function Home(){
 
         data = await catalogData();
         catalogWrapper.removeChild(spin);
-        // console.log(dataDb);
-        // console.log(dataDb.data);  
-        data.forEach(d => {
-            let CatalogGridItem = document.createElement('div');
-            CatalogGridItem.classList.add('catalog-grid-item');
-            let imgLinc = document.createElement('a');
-            imgLinc.setAttribute('href', `#productcard/${d.id}`); 
-            let img = document.createElement('img');
-            img.classList.add('card_img');
-            img.setAttribute('src', d.data.img);
-            imgLinc.append(img);
-            let cardDesc = document.createElement('div');
-            cardDesc.classList.add('card_description');
-            let titleLinc = document.createElement('a');
-            titleLinc.setAttribute('href', `#productcard/${d.id}`); 
-            titleLinc.innerText = d.data.name;
-            let title = document.createElement('h2');
-            title.classList.add('card_title');
-            title.append(titleLinc)
-            let priceCard = document.createElement('p');
-            priceCard.classList.add('card_price');
-            priceCard.innerText = d.data.price;
+        
+        
+        // console.log(data)
 
-            let btnAdd = document.createElement('button');
-            btnAdd.classList.add('btn-catalog-add');
-            if (localCard && localCard.some(d => d.id === d.id)){
-                btnAdd.innerText = 'Added';
-                btnAdd.disabled = true;
-            }else{
-                btnAdd.innerText = 'Add';
-            }
+        // for (var i = 0; i < 3; i++) {
+        //     console.log(data[i]);
+        //   }
 
+        const category1 = document.createElement('div');
+        category1.classList.add('catalog-grid-item');
+        category1.classList.add('category-item');
+        category1.classList.add('care-category');
+        category1.innerHTML =`
+            <div class="category-desc">
+                <p>Care</p>
+                <div class="arrows">
+                    <a href="" class="arrow-left"> <img src="../../img/arrow-left.png" alt="arrow-left"> </a>
+                    <a href="" class="arrow-right"> <img src="../../img/arrow-right.png" alt="arrow-right"> </a>
+                </div>
+            </div>
+        `
+        homeCatalogGrid.append(category1);
 
-            cardDesc.append(title,priceCard);
-            CatalogGridItem.append(imgLinc, cardDesc, btnAdd);
-            homeCatalogGrid.append(CatalogGridItem);
+        function block1(data) {
             
-            btnAdd.addEventListener('click', () => {
-                import('./Card.js')
-                    .then(module => {
-                        if (module.addCard(d)){
-                            btnAdd.innerText = 'Added';
-                            btnAdd.disabled = true;
-                        }
-                    })
+            data = data.slice(0, 6);
+            console.log(data);
+
+            data.forEach(d => {
+                let CatalogGridItem = document.createElement('div');
+                CatalogGridItem.classList.add('catalog-grid-item');
+                let imgLinc = document.createElement('a');
+                imgLinc.setAttribute('href', `#productcard/${d.id}`); 
+                let img = document.createElement('img');
+                img.classList.add('card_img');
+                img.setAttribute('src', d.data.img);
+                imgLinc.append(img);
+                let cardDesc = document.createElement('div');
+                cardDesc.classList.add('card_description');
+                let titleLinc = document.createElement('a');
+                titleLinc.setAttribute('href', `#productcard/${d.id}`); 
+                titleLinc.innerText = d.data.name;
+                let title = document.createElement('h2');
+                title.classList.add('card_title');
+                title.append(titleLinc)
+                let priceCard = document.createElement('p');
+                priceCard.classList.add('card_price');
+                priceCard.innerText = d.data.price;
+    
+                let btnAdd = document.createElement('button');
+                btnAdd.classList.add('btn-catalog-add');
+                if (localCard && localCard.some(d => d.id === d.id)){
+                    btnAdd.innerText = 'Added';
+                    btnAdd.disabled = true;
+                }else{
+                    btnAdd.innerText = 'Add';
+                }
+    
+    
+                cardDesc.append(title,priceCard);
+                CatalogGridItem.append(imgLinc, cardDesc, btnAdd);
+                homeCatalogGrid.append(CatalogGridItem);
+                
+                btnAdd.addEventListener('click', () => {
+                    import('./Card.js')
+                        .then(module => {
+                            if (module.addCard(d)){
+                                btnAdd.innerText = 'Added';
+                                btnAdd.disabled = true;
+                            }
+                        })
+                })
             })
-        })
+
+        }
+
+        block1(data);
+        
+        const category2 = document.createElement('div');
+        category2.classList.add('catalog-grid-item');
+        category2.classList.add('category-item');
+        category2.classList.add('beauty-category');
+        category2.innerHTML =`
+            
+                <div class="category-desc">
+                    <p>Beauty</p>
+                    <div class="arrows">
+                        <a href="" class="arrow-left"> <img src="./img/arrow-left.png" alt="arrow-left"> </a>
+                    <a href="" class="arrow-right"> <img src="./img/arrow-right.png" alt="arrow-right"> </a>
+                    </div>
+                </div>
+            
+        `
+
+        homeCatalogGrid.append(category2);
+
+        const category3 = document.createElement('div');
+        category3.classList.add('catalog-grid-item');
+        category3.classList.add('category-item');
+        category3.classList.add('brows-category');
+        category3.innerHTML =`
+            
+                <div class="category-desc">
+                    <p>Brows</p>
+                    <div class="arrows">
+                        <a href="" class="arrow-left"> <img src="./img/arrow-left.png" alt="arrow-left"> </a>
+                        <a href="" class="arrow-right"> <img src="./img/arrow-right.png" alt="arrow-right"> </a>
+                    </div>
+                </div>
+            
+        `
+
+        homeCatalogGrid.append(category3);
+        
+        function block2(data) {
+            
+            data = data.slice(7, 10);
+            console.log(data);
+
+            data.forEach(d => {
+                let CatalogGridItem = document.createElement('div');
+                CatalogGridItem.classList.add('catalog-grid-item');
+                let imgLinc = document.createElement('a');
+                imgLinc.setAttribute('href', `#productcard/${d.id}`); 
+                let img = document.createElement('img');
+                img.classList.add('card_img');
+                img.setAttribute('src', d.data.img);
+                imgLinc.append(img);
+                let cardDesc = document.createElement('div');
+                cardDesc.classList.add('card_description');
+                let titleLinc = document.createElement('a');
+                titleLinc.setAttribute('href', `#productcard/${d.id}`); 
+                titleLinc.innerText = d.data.name;
+                let title = document.createElement('h2');
+                title.classList.add('card_title');
+                title.append(titleLinc)
+                let priceCard = document.createElement('p');
+                priceCard.classList.add('card_price');
+                priceCard.innerText = d.data.price;
+    
+                let btnAdd = document.createElement('button');
+                btnAdd.classList.add('btn-catalog-add');
+                if (localCard && localCard.some(d => d.id === d.id)){
+                    btnAdd.innerText = 'Added';
+                    btnAdd.disabled = true;
+                }else{
+                    btnAdd.innerText = 'Add';
+                }
+    
+    
+                cardDesc.append(title,priceCard);
+                CatalogGridItem.append(imgLinc, cardDesc, btnAdd);
+                homeCatalogGrid.append(CatalogGridItem);
+                
+                btnAdd.addEventListener('click', () => {
+                    import('./Card.js')
+                        .then(module => {
+                            if (module.addCard(d)){
+                                btnAdd.innerText = 'Added';
+                                btnAdd.disabled = true;
+                            }
+                        })
+                })
+            })
+
+        }
+
+        block2(data);
+        
     }
 
     render(dataDb);

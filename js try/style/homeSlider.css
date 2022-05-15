@@ -16,24 +16,22 @@
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-/* Фон кнопок вперед и назад при наведении */
+
 .slider .prev:hover,
 .slider .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-/* надпись */
+
 .slideText {
     position: absolute;
     color: #fff;
     font-size: 35px;
-    /* Выравнивание текста горизонтально и по вертикально*/
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    /* Тень текста*/
     text-shadow: 1px 1px 1px #000, 0 0 1em #000;
 }
-/* Кружочки под слайдами */
+
 .slider-dots {
     text-align: center;
     padding-bottom: 48px;
@@ -52,7 +50,7 @@
 .slider-dots_item:hover {
     background-color: #aaa;
 }
-/* Анимация слайдов */
+
 .slider .item {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;

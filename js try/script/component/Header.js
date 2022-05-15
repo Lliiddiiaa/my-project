@@ -24,14 +24,32 @@ function Header(){
                     <a class="logo navbar-logo" id="logo-header" href="\"></a>
                 </div>
             </div>
-            <div class="header-slider" id="home-slider">
+            <div class="header-slider slider" id="home-slider">
                 <div class="wrapper">
-                    <div class="arrow arrow-left"><img src="./img/arrow-left.png" alt="arrow-left"></div>
-                    <div class="card-header-slider">
-                        <h1>Capsule Collection</h1>
+                    <div class="arrow arrow-left prev" onclick="minusSlide()"><img src="./img/arrow-left.png" alt="arrow-left"></div>
+                    <div class="card-header-slider item" id="slide showing"> 
+                        <div class="slideText"><a href="#catalog"><h1>Capsule Collection</h1></a></div>
                     </div>
-                    <div class="arrow arrow-right"><img src="./img/arrow-right.png" alt="arrow-right"></div>
-                    <div class="header-slider-nav"></div>
+                    <div class="card-header-slider item"> 
+                        <div class="slideText"><a href="#catalog"><h1>Care</h1></a></div>
+                    </div>
+                    <div class="card-header-slider item"> 
+                        <div class="slideText"><a href="#catalog"><h1>Decorative cosmetics</h1></a></div>
+                    </div>
+                    <div class="card-header-slider item"> 
+                        <div class="slideText"><a href="#catalog"><h1>Eyebrow</h1></a></div>
+                    </div>
+                    <div class="card-header-slider item"> 
+                        <div class="slideText"><a href="#catalog"><h1>Accessories</h1></a></div>
+                    </div>
+                    <div class="arrow arrow-right next" onclick="plusSlide()"><img src="./img/arrow-right.png" alt="arrow-right"></div>
+                </div>
+                <div class="slider-dots">
+                    <span class="slider-dots_item"  onclick="currentxSlide(1)"></span> 
+                    <span class="slider-dots_item" onclick="currentxSlide(2)"></span> 
+                    <span class="slider-dots_item" onclick="currentxSlide(3)"></span> 
+	                <span class="slider-dots_item" onclick="currentxSlide(4)"></span> 
+                    <span class="slider-dots_item" onclick="currentxSlide(5)"></span> 
                 </div>
             </div>
         </header>

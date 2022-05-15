@@ -44,14 +44,14 @@ function Header(){
                     </div>
                     <div class="arrow arrow-right next" onclick="plusSlide()"><img src="./img/arrow-right.png" alt="arrow-right"></div>
                 </div>
-                <div class="slider-dots">
-                    <span class="slider-dots_item"  onclick="currentxSlide(1)"></span> 
-                    <span class="slider-dots_item" onclick="currentxSlide(2)"></span> 
-                    <span class="slider-dots_item" onclick="currentxSlide(3)"></span> 
-	                <span class="slider-dots_item" onclick="currentxSlide(4)"></span> 
-                    <span class="slider-dots_item" onclick="currentxSlide(5)"></span> 
-                </div>
             </div>
+        <div class="slider-dots">
+            <span class="slider-dots_item"  onclick="currentxSlide(1)"></span> 
+            <span class="slider-dots_item" onclick="currentxSlide(2)"></span> 
+            <span class="slider-dots_item" onclick="currentxSlide(3)"></span> 
+            <span class="slider-dots_item" onclick="currentxSlide(4)"></span> 
+            <span class="slider-dots_item" onclick="currentxSlide(5)"></span> 
+        </div>
         </header>
 
 

@@ -3,16 +3,12 @@ import spinner from "./spinner.js";
 
 function Home(){
     this.title ='Home'
-    console.log('Рисуем страницу хоум')
     const header = document.querySelector('header');
     header.classList.add('home_header');
     const homeLogo = document.getElementById('logo-header');
-    // console.log(homeLogo)
     homeLogo.classList.add('logo-white');
     const homeSlider = document.getElementById('home-slider');
-    // console.log(homeSlider)
     homeSlider.classList.add('home_slider');
-    // console.log(header);
 
     const elem = document.createElement('div');
     elem.classList.add('home_component');
@@ -45,13 +41,6 @@ function Home(){
         data = await catalogData();
         catalogWrapper.removeChild(spin);
         
-        
-        // console.log(data)
-
-        // for (var i = 0; i < 3; i++) {
-        //     console.log(data[i]);
-        //   }
-
         const category1 = document.createElement('div');
         category1.classList.add('catalog-grid-item');
         category1.classList.add('category-item');
@@ -70,7 +59,7 @@ function Home(){
         function block1(data) {
             
             data = data.slice(0, 6);
-            console.log(data);
+            // console.log(data);
 
             data.forEach(d => {
                 let CatalogGridItem = document.createElement('div');
@@ -161,7 +150,7 @@ function Home(){
         function block2(data) {
             
             data = data.slice(7, 10);
-            console.log(data);
+            // console.log(data);
 
             data.forEach(d => {
                 let CatalogGridItem = document.createElement('div');

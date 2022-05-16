@@ -217,20 +217,16 @@
     width: 100%;
 }
 
-.item_component .cat-item1,
-.item_component .cat-item6,
-.item_component .cat-item9 {
-    background-image: url(../img/goods1.png);
+/* .catalog-grid {
+    display: flex;
+    overflow: hidden;
+} */
+
+.item_component .catalog-grid-item {
+    width: 310px !important;
+    height: 430px;
+    margin-right: 20px;
 }
 
-.item_component .cat-item2,
-.item_component .cat-item5,
-.item_component .cat-item7 {
-    background-image: url(../img/goods2.svg);
-}
 
-.item_component .cat-item3,
-.item_component .cat-item4,
-.item_component.cat-item8 {
-    background-image: url(../img/goods3.png);
-}
+

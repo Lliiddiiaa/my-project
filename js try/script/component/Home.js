@@ -270,100 +270,16 @@ function Home(){
         `
     mainHome.append(sectionAbout, sectionInsta);
             
-                // <div class="catalog-grid-item category-item care-category">
-                //     <div class="category-desc">
-                //         <p>Care</p>
-                //         <div class="arrows">
-                //             <a href="" class="arrow-left"> <img src="./img/arrow-left.png" alt="arrow-left"> </a>
-                //             <a href="" class="arrow-right"> <img src="./img/arrow-right.png" alt="arrow-right"> </a>
-                //         </div>
-                //     </div>
-                // </div>
-                // <div class="catalog-grid-item cat-item1">
-                //     <div class="card-description">
-                //         <p>Perfect brows</p>
-                //         <p>54 €</p>
-                //     </div>
-                // </div>
-                // <div class="catalog-grid-item cat-item2">
-                //     <div class="card-description">
-                //         <p>Perfect brows</p>
-                //         <p>54 €</p>
-                //     </div>
-                // </div>
-                // <div class="catalog-grid-item cat-item3">
-                //     <div class="card-description">
-                //         <p>Perfect brows</p>
-                //         <p>54 €</p>
-                //     </div>
-                // </div>
-                // <div class="catalog-grid-item cat-item4">
-                //     <div class="card-description">
-                //         <p>Perfect brows</p>
-                //         <p>54 €</p>
-                //     </div>
-                // </div>
-                // <div class="catalog-grid-item cat-item5">
-                //     <div class="card-description">
-                //         <p>Perfect brows</p>
-                //         <p>54 €</p>
-                //     </div>
-                // </div>
-                // <div class="catalog-grid-item cat-item6">
-                //     <div class="card-description">
-                //         <p>Perfect brows</p>
-                //         <p>54 €</p>
-                //     </div>
-                // </div>
-                // <div class="catalog-grid-item category-item beauty-category">
-                //     <div class="category-desc">
-                //         <p>Beauty</p>
-                //         <div class="arrows">
-                //             <a href="" class="arrow-left"> <img src="./img/arrow-left.png" alt="arrow-left"> </a>
-                //             <a href="" class="arrow-right"> <img src="./img/arrow-right.png" alt="arrow-right"> </a>
-                //         </div>
-                //     </div>
-                // </div>
-                // <div class="catalog-grid-item category-item brows-category">
-                //     <div class="category-desc">
-                //         <p>Brows</p>
-                //         <div class="arrows">
-                //             <a href="" class="arrow-left"> <img src="./img/arrow-left.png" alt="arrow-left"> </a>
-                //             <a href="" class="arrow-right"> <img src="./img/arrow-right.png" alt="arrow-right"> </a>
-                //         </div>
-                //     </div>
-                // </div>
-                // <div class="catalog-grid-item cat-item7">
-                //     <div class="card-description">
-                //         <p>Perfect brows</p>
-                //         <p>54 €</p>
-                //     </div>
-                // </div>
-                // <div class="catalog-grid-item cat-item8">
-                //     <div class="card-description">
-                //         <p>Perfect brows</p>
-                //         <p>54 €</p>
-                //     </div>
-                // </div>
-                // <div class="catalog-grid-item cat-item9">
-                //     <div class="card-description">
-                //         <p>Perfect brows</p>
-                //         <p>54 €</p>
-                //     </div>
-                // </div>
-            
-       
-    
-//------------------------------------------------------------------НАДО ПЕРЕПИСАТЬ
     
     this.init = () => {
         return elem;
     }
 }
 
-let elem = new Home();
-let init = elem.init();
+let elem = Home;
+let init = elem.init;
 let title = elem.title;
+let returnHeader = elem.returnHeader;
 
-export default init;
-export {title};
+export default elem;
+export {title, init};

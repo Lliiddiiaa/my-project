@@ -52,9 +52,10 @@ function Workprocess(){
     }
 }
 
-let elem = new Workprocess();
-let init = elem.init();
+let elem = Workprocess;
+let init = elem.init;
 let title = elem.title;
+let returnHeader = elem.returnHeader;
 
-export default init;
-export {title};
+export default elem;
+export {title,init};

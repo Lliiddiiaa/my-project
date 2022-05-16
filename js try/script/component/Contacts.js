@@ -144,9 +144,11 @@ function Contacts(){
     }
 }
 
-let elem = new Contacts();
-let init = elem.init();
+let elem = Contacts;
+let init = elem.init;
 let title = elem.title;
+let returnHeader = elem.returnHeader;
 
-export default init;
-export {title};
+export default elem;
+export {title,init};
+

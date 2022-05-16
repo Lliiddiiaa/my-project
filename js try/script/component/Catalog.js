@@ -133,9 +133,10 @@ function Catalog(){
     }
 }
 
-let elem = new Catalog();
-let init = elem.init();
+let elem = Catalog;
+let init = elem.init;
 let title = elem.title;
+let returnHeader = elem.returnHeader;
 
-export default init;
-export {title};
+export default elem;
+export { title, init };

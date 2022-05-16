@@ -22,8 +22,11 @@ function Main(){
             .then(module => {
                 elem.innerHTML = '';
                 // console.log(module);
-                elem.append(module.default);
+                elem.append(new module.default().init());
                 document.title = module.title;
+                if(module.returnHeader) {
+                    module.returnHeader();
+                }
             });
     }
 

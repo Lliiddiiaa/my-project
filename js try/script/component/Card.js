@@ -120,7 +120,10 @@ let elem = new Card();
 let init = elem.init();
 let widget = elem.cardWidget();
 let addCard = elem.addCard;
-let title = elem.title
+let title = elem.title;
+let returnHeader = elem.returnHeader;
 
 export default init;
 export {widget, addCard, title}
+
+

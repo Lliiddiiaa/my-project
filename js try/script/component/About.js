@@ -79,9 +79,11 @@ function About(){
     }
 }
 
-let elem = new About();
-let init = elem.init();
+let elem = About;
+let init = elem.init;
 let title = elem.title;
+let returnHeader = elem.returnHeader;
 
-export default init;
-export {title};
+export default elem;
+export { title, init };
+

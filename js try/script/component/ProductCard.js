@@ -1,4 +1,4 @@
-import {itemApi} from "./catalogApi.js";
+import {itemApi,catalogData} from "./catalogApi.js";
 import spinner from "./spinner.js";
 import {addCard} from "./Card.js";
 
@@ -188,35 +188,93 @@ function Catalog(){
 
         const products = document.createElement('section');
         products.classList.add('products');
-        products.innerHTML = `
-            <div class="catalog-grid">
-                <div class="catalog-grid-item cat-item1">
-                    <div class="card-description">
-                        <p>Perfect brows</p>
-                        <p>54 €</p>
-                    </div>
-                </div>
-                <div class="catalog-grid-item cat-item2">
-                    <div class="card-description">
-                        <p>Perfect brows</p>
-                        <p>54 €</p>
-                    </div>
-                </div>
-                <div class="catalog-grid-item cat-item3">
-                    <div class="card-description">
-                        <p>Perfect brows</p>
-                        <p>54 €</p>
-                    </div>
-                </div>
-                <div class="catalog-grid-item cat-item4">
-                    <div class="card-description">
-                        <p>Perfect brows</p>
-                        <p>54 €</p>
-                    </div>
-                </div>
-            </div>
-        `
+        const ArrowLeft = document.createElement('button');
+        const ArrowImg = document.createElement('img');
+        ArrowImg.setAttribute('src','./img/arrow-left.png');
+        ArrowLeft.append(ArrowImg);
+        ArrowLeft.classList.add('arrowNav');
+        ArrowLeft.classList.add('prev');
+        products.append(ArrowLeft);
+        // const productsSlider = document.createElement('div');
+        // productsSlider.classList.add('productsSlider');
+        // products.append(productsSlider);
+        const catalogGrid = document.createElement('div');
+        catalogGrid.classList.add('catalog-grid');
+        catalogGrid.classList.add('carousel');
+        catalogGrid.setAttribute('id','carousel');
+        products.append(catalogGrid);
+        let ul = document.createElement('ul');
+        catalogGrid.append(ul);
         
+        
+        let dataDb = []; 
+
+        const render = async (data) => {
+            
+            let localCard = localStorage.getItem('card');
+            localCard = JSON.parse(localCard);
+
+            data = await catalogData();
+                 
+            data.forEach(d => {
+                let li = document.createElement('li');
+                let CatalogGridItem = document.createElement('div');
+                CatalogGridItem.classList.add('catalog-grid-item');
+                let imgLinc = document.createElement('a');
+                imgLinc.setAttribute('href', `#productcard/${d.id}`); 
+                let img = document.createElement('img');
+                img.classList.add('card_img');
+                img.setAttribute('src', d.data.img);
+                imgLinc.append(img);
+                let cardDesc = document.createElement('div');
+                cardDesc.classList.add('card_description');
+                let titleLinc = document.createElement('a');
+                titleLinc.setAttribute('href', `#productcard/${d.id}`); 
+                titleLinc.innerText = d.data.name;
+                let title = document.createElement('h2');
+                title.classList.add('card_title');
+                title.append(titleLinc)
+                let priceCard = document.createElement('p');
+                priceCard.classList.add('card_price');
+                priceCard.innerText = d.data.price;
+
+                let btnAdd = document.createElement('button');
+                btnAdd.classList.add('btn-catalog-add');
+                if (localCard && localCard.some(d => d.id === d.id)){
+                    btnAdd.innerText = 'Added';
+                    btnAdd.disabled = true;
+                }else{
+                    btnAdd.innerText = 'Add';
+                }
+
+
+                cardDesc.append(title,priceCard);
+                CatalogGridItem.append(imgLinc, cardDesc, btnAdd);
+                li.append(CatalogGridItem);
+                ul.append(li);
+            
+                btnAdd.addEventListener('click', () => {
+                    import('./Card.js')
+                        .then(module => {
+                            if (module.addCard(d)){
+                                btnAdd.innerText = 'Added';
+                                btnAdd.disabled = true;
+                            }
+                        })
+                })
+            })
+        }
+
+        render(dataDb);
+
+
+        const ArrowRight = document.createElement('button');
+        const ArrowImgR = document.createElement('img');
+        ArrowImgR.setAttribute('src','./img/arrow-right.png');
+        ArrowRight.append(ArrowImgR);
+        ArrowRight.classList.add('arrowNav');
+        ArrowRight.classList.add('next');
+        products.append(ArrowRight);
 
         mainItem.append(productCardBlock,infoblock1,infoblock2,quoteSlider,products);
 

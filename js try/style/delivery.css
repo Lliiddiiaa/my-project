@@ -18,6 +18,10 @@
     margin-top: 0 !important;
 }
 
+.delivery_component .back-page p::before {
+    height: 20px;
+}
+
 @media (max-width:800px) {
 
     .delivery_component ul {

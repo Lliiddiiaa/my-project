@@ -60,7 +60,7 @@
     box-sizing: border-box;
   }
   
-  .item {
+  .itemLine {
     width: 310px;
     height: 430px;
     background: green;

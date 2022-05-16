@@ -73,13 +73,20 @@ function Catalog(){
         const order = document.createElement('div');
         order.classList.add('order-info');
 
+        const amountBlock = document.createElement('div');
+        amountBlock.classList.add('amount-block');
+        order.append(amountBlock);
         const btnMinus = document.createElement('button');
+        btnMinus.innerText = "-";
         const amount = document.createElement('p');
         amount.innerText = '1';
         const btnPlus = document.createElement('button');
+        btnPlus.innerText = "+";
         const price = document.createElement('p');
         price.innerText = data.price; 
-        order.append(btnMinus,amount,btnPlus,price);
+        price.classList.add('pricetext');
+        amountBlock.append(btnMinus,amount,btnPlus);
+        order.append(amountBlock,price);
 
         const btnAddCart = document.createElement('button');
         btnAddCart.classList.add('btn-add-cart');
@@ -226,7 +233,7 @@ function Catalog(){
                 // let li = document.createElement('li');
                 let CatalogGridItem = document.createElement('div');
                 CatalogGridItem.classList.add('catalog-grid-item');
-                CatalogGridItem.classList.add('item');
+                CatalogGridItem.classList.add('itemLine');
                 let imgLinc = document.createElement('a');
                 imgLinc.setAttribute('href', `#productcard/${d.id}`); 
                 let img = document.createElement('img');
@@ -316,6 +323,8 @@ function Catalog(){
 
         mainItem.append(productCardBlock,infoblock1,infoblock2,quoteSlider,products);
 
+       
+
         // console.log(data);
         // Добавить кнопку "В корзину"
 
@@ -340,6 +349,8 @@ function Catalog(){
         this.ren(id)
         return elem;
     }
+
+    
 }
 
 let product = new Catalog();

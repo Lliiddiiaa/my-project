@@ -28,9 +28,9 @@
     content: "";
     position: relative;
     float: left;
-    margin: 2px 5px 0 0;
+    /* margin: 2px 5px 0 0; */
     width: 30px;
-    height: 31px;
+    height: 17px;
     background-image: url('../img/icon-cart-black.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -68,7 +68,7 @@
     float: left;
     margin: 2px 5px 0 0;
     width: 24px;
-    height: 34px;
+    height: 16px;
     background-image: url('../img/icon-heart.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -229,4 +229,35 @@
 }
 
 
+.item_component .main {
+    padding-top: 70px;
+}
+
+.product-card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricetext {
+    font-size: 32px;
+    line-height: 120%;
+}
+
+.amount-block {
+    display: flex;
+    border-radius: 60px;
+    background-color:#EEE4DA;
+}
+
+.amount-block button,
+.amount-block p {
+    padding: 15px;
+    background-color: #EEE4DA;
+}
+
+.amount-block button {
+    border: none;
+    border-radius: 32px;
+}
 

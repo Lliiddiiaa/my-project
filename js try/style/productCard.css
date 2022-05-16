@@ -189,14 +189,14 @@
     padding: 35px;
 }
 
-.item_component .catalog-grid {
+/* .item_component .catalog-grid {
     display: grid;
     grid-column-gap:20px;
     grid-row-gap:30px;
     grid-template-columns: 
         repeat(auto-fill, minmax(310px, 1fr));
     padding: 70px 0;
-}
+} */
 
 .item_component .catalog-grid-item {
     background-color: #EEE4DA;

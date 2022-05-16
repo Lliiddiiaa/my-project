@@ -1,6 +1,7 @@
 import {itemApi,catalogData} from "./catalogApi.js";
 import spinner from "./spinner.js";
 import {addCard} from "./Card.js";
+// import lineSlider from "./script.js";
 
 function Catalog(){
     //не находит элементы
@@ -188,23 +189,28 @@ function Catalog(){
 
         const products = document.createElement('section');
         products.classList.add('products');
-        const ArrowLeft = document.createElement('button');
-        const ArrowImg = document.createElement('img');
-        ArrowImg.setAttribute('src','./img/arrow-left.png');
-        ArrowLeft.append(ArrowImg);
-        ArrowLeft.classList.add('arrowNav');
-        ArrowLeft.classList.add('prev');
-        products.append(ArrowLeft);
-        // const productsSlider = document.createElement('div');
+        // const ArrowLeft = document.createElement('button');
+        // const ArrowImg = document.createElement('img');
+        // ArrowImg.setAttribute('src','./img/arrow-left.png');
+        // ArrowLeft.append(ArrowImg);
+        // ArrowLeft.classList.add('arrowNav');
+        // ArrowLeft.classList.add('prev');
+        // products.append(ArrowLeft);
+
+
+        const productsSlider = document.createElement('div');
         // productsSlider.classList.add('productsSlider');
-        // products.append(productsSlider);
+        productsSlider.classList.add('sliderWrapper');
+        productsSlider.setAttribute('id','sliderWrapper');
+        products.append(productsSlider);
         const catalogGrid = document.createElement('div');
         catalogGrid.classList.add('catalog-grid');
         catalogGrid.classList.add('carousel');
         catalogGrid.setAttribute('id','carousel');
-        products.append(catalogGrid);
-        let ul = document.createElement('ul');
-        catalogGrid.append(ul);
+        productsSlider.append(catalogGrid);
+        const content = document.createElement('div');
+        content.setAttribute('id','content');
+        catalogGrid.append(content);
         
         
         let dataDb = []; 
@@ -217,9 +223,10 @@ function Catalog(){
             data = await catalogData();
                  
             data.forEach(d => {
-                let li = document.createElement('li');
+                // let li = document.createElement('li');
                 let CatalogGridItem = document.createElement('div');
                 CatalogGridItem.classList.add('catalog-grid-item');
+                CatalogGridItem.classList.add('item');
                 let imgLinc = document.createElement('a');
                 imgLinc.setAttribute('href', `#productcard/${d.id}`); 
                 let img = document.createElement('img');
@@ -250,8 +257,8 @@ function Catalog(){
 
                 cardDesc.append(title,priceCard);
                 CatalogGridItem.append(imgLinc, cardDesc, btnAdd);
-                li.append(CatalogGridItem);
-                ul.append(li);
+                content.append(CatalogGridItem);
+                
             
                 btnAdd.addEventListener('click', () => {
                     import('./Card.js')
@@ -267,14 +274,45 @@ function Catalog(){
 
         render(dataDb);
 
+        
 
-        const ArrowRight = document.createElement('button');
-        const ArrowImgR = document.createElement('img');
-        ArrowImgR.setAttribute('src','./img/arrow-right.png');
-        ArrowRight.append(ArrowImgR);
-        ArrowRight.classList.add('arrowNav');
-        ArrowRight.classList.add('next');
-        products.append(ArrowRight);
+        // const ArrowRight = document.createElement('button');
+        // const ArrowImgR = document.createElement('img');
+        // ArrowImgR.setAttribute('src','./img/arrow-right.png');
+        // ArrowRight.append(ArrowImgR);
+        // ArrowRight.classList.add('arrowNav');
+        // ArrowRight.classList.add('next');
+        // products.append(ArrowRight);
+
+        const prev  = document.createElement('button');
+        prev.setAttribute('id','prevLine');
+        prev.innerHTML = `
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                >
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+            </svg>
+        `
+
+        const next = document.createElement('button');
+        next.setAttribute('id','nextLine');
+        next.innerHTML = `
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+            >
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+            </svg>
+        `
+
+        productsSlider.append(prev,next);
 
         mainItem.append(productCardBlock,infoblock1,infoblock2,quoteSlider,products);
 

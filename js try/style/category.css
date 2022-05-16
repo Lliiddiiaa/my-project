@@ -28,7 +28,7 @@ h1 {
     width: 92%;
 }
 
-.catalog-grid {
+.catalog_component .catalog-grid {
     display: grid;
     grid-column-gap:20px;
     grid-row-gap:30px;

@@ -1,5 +1,3 @@
-
-
 function Card(){
     
     // ----------------------------------------------------------------не находит элементы вообще
@@ -125,5 +123,3 @@ let returnHeader = elem.returnHeader;
 
 export default init;
 export {widget, addCard, title}
-
-

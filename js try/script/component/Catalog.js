@@ -25,12 +25,18 @@ function Catalog(){
     const catalogH1 = document.createElement('h1');
     catalogH1.innerText = `Care cosmetics`;
     const btnCare = document.createElement('button');
+    btnCare.classList.add('btnCare');
     btnCare.innerText = `Care cosmetics`;
     const btnDecorative = document.createElement('button');
+    btnDecorative.classList.add('btnDecorative');
     btnDecorative.innerText = `Decorative cosmetics`;
+    btnDecorative.setAttribute('onclick','renderCare');
+    console.log('why')
     const btnEyebrow = document.createElement('button');
+    btnEyebrow.classList.add('btnEyebrow');
     btnEyebrow.innerText = `Eyebrow cosmetics`;
     const btnAccessories = document.createElement('button');
+    btnAccessories.classList.add('btnAccessories');
     btnAccessories.innerText = `Accessories`;
     const catalogImgBc = document.createElement('img');
     catalogImgBc.setAttribute('src', `../img/about-img2.png`);
@@ -75,8 +81,257 @@ function Catalog(){
 
         data = await catalogData();
         wrapper.removeChild(spin);
-        // console.log(dataDb);
-        // console.log(dataDb.data);  
+        
+        let btnCare = document.getElementsByClassName('btnCare');
+        console.log(btnCare);
+        let btnDecorative = document.getElementsByClassName('btnDecorative');
+        let btnEyebrow = document.getElementsByClassName('btnEyebrow');
+        let btnAccessories = document.getElementsByClassName('btnAccessories');
+
+        btnCare[0].addEventListener('click', renderCare());
+        btnDecorative[0].addEventListener('click', renderDecorative());
+        btnEyebrow[0].addEventListener('click', renderEyebrow());
+        btnAccessories[0].addEventListener('click', renderAccessories());
+
+        
+        function renderCare(data) {
+
+            // data = data.filter(careFilter);
+            // console.log(data)
+    
+            for (let i = 0; i < data.length; i++) {
+                if(data[i].data.category === 'care') {
+
+                    let CatalogGridItem = document.createElement('div');
+                    CatalogGridItem.classList.add('catalog-grid-item');
+                    let imgLinc = document.createElement('a');
+                    imgLinc.setAttribute('href', `#productcard/${data[i].id}`); 
+                    let img = document.createElement('img');
+                    img.classList.add('card_img');
+                    img.setAttribute('src', data[i].data.img);
+                    imgLinc.append(img);
+                    let cardDesc = document.createElement('div');
+                    cardDesc.classList.add('card_description');
+                    let titleLinc = document.createElement('a');
+                    titleLinc.setAttribute('href', `#productcard/${data[i].id}`); 
+                    titleLinc.innerText = data[i].data.name;
+                    let title = document.createElement('h2');
+                    title.classList.add('card_title');
+                    title.append(titleLinc)
+                    let priceCard = document.createElement('p');
+                    priceCard.classList.add('card_price');
+                    priceCard.innerText = data[i].data.price;
+
+                    // let btnAdd = document.createElement('button');
+                    // btnAdd.classList.add('btn-catalog-add');
+                    // if (localCard && localCard.some(data => data[i].id === data[i].id)){
+                    //     btnAdd.innerText = 'Added';
+                    //     btnAdd.disabled = true;
+                    // }else{
+                    //     btnAdd.innerText = 'Add';
+                    // }
+
+
+                    cardDesc.append(title,priceCard);
+                    // CatalogGridItem.append(imgLinc, cardDesc, btnAdd);
+                    CatalogGridItem.append(imgLinc, cardDesc);
+                    catalogGrid.append(CatalogGridItem);
+                    
+                    // btnAdd.addEventListener('click', () => {
+                    //     import('./Card.js')
+                    //         .then(module => {
+                    //             if (module.addCard(d)){
+                    //                 btnAdd.innerText = 'Added';
+                    //                 btnAdd.disabled = true;
+                    //             }
+                    //         })
+                    // })
+                    
+                    // console.log(data[i]);
+                }
+            }
+            
+        }
+
+        function renderDecorative(data) {
+
+            // data = data.filter(careFilter);
+            // console.log(data)
+    
+            for (let i = 0; i < data.length; i++) {
+                if(data[i].data.category === 'decorative') {
+
+                    let CatalogGridItem = document.createElement('div');
+                    CatalogGridItem.classList.add('catalog-grid-item');
+                    let imgLinc = document.createElement('a');
+                    imgLinc.setAttribute('href', `#productcard/${data[i].id}`); 
+                    let img = document.createElement('img');
+                    img.classList.add('card_img');
+                    img.setAttribute('src', data[i].data.img);
+                    imgLinc.append(img);
+                    let cardDesc = document.createElement('div');
+                    cardDesc.classList.add('card_description');
+                    let titleLinc = document.createElement('a');
+                    titleLinc.setAttribute('href', `#productcard/${data[i].id}`); 
+                    titleLinc.innerText = data[i].data.name;
+                    let title = document.createElement('h2');
+                    title.classList.add('card_title');
+                    title.append(titleLinc)
+                    let priceCard = document.createElement('p');
+                    priceCard.classList.add('card_price');
+                    priceCard.innerText = data[i].data.price;
+
+                    // let btnAdd = document.createElement('button');
+                    // btnAdd.classList.add('btn-catalog-add');
+                    // if (localCard && localCard.some(data => data[i].id === data[i].id)){
+                    //     btnAdd.innerText = 'Added';
+                    //     btnAdd.disabled = true;
+                    // }else{
+                    //     btnAdd.innerText = 'Add';
+                    // }
+
+
+                    cardDesc.append(title,priceCard);
+                    // CatalogGridItem.append(imgLinc, cardDesc, btnAdd);
+                    CatalogGridItem.append(imgLinc, cardDesc);
+                    catalogGrid.append(CatalogGridItem);
+                    
+                    // btnAdd.addEventListener('click', () => {
+                    //     import('./Card.js')
+                    //         .then(module => {
+                    //             if (module.addCard(d)){
+                    //                 btnAdd.innerText = 'Added';
+                    //                 btnAdd.disabled = true;
+                    //             }
+                    //         })
+                    // })
+                    
+                    // console.log(data[i]);
+                }
+            }
+            
+        }
+
+        function renderEyebrow(data) {
+
+            // data = data.filter(careFilter);
+            // console.log(data)
+    
+            for (let i = 0; i < data.length; i++) {
+                if(data[i].data.category === 'eyebrow') {
+
+                    let CatalogGridItem = document.createElement('div');
+                    CatalogGridItem.classList.add('catalog-grid-item');
+                    let imgLinc = document.createElement('a');
+                    imgLinc.setAttribute('href', `#productcard/${data[i].id}`); 
+                    let img = document.createElement('img');
+                    img.classList.add('card_img');
+                    img.setAttribute('src', data[i].data.img);
+                    imgLinc.append(img);
+                    let cardDesc = document.createElement('div');
+                    cardDesc.classList.add('card_description');
+                    let titleLinc = document.createElement('a');
+                    titleLinc.setAttribute('href', `#productcard/${data[i].id}`); 
+                    titleLinc.innerText = data[i].data.name;
+                    let title = document.createElement('h2');
+                    title.classList.add('card_title');
+                    title.append(titleLinc)
+                    let priceCard = document.createElement('p');
+                    priceCard.classList.add('card_price');
+                    priceCard.innerText = data[i].data.price;
+
+                    // let btnAdd = document.createElement('button');
+                    // btnAdd.classList.add('btn-catalog-add');
+                    // if (localCard && localCard.some(data => data[i].id === data[i].id)){
+                    //     btnAdd.innerText = 'Added';
+                    //     btnAdd.disabled = true;
+                    // }else{
+                    //     btnAdd.innerText = 'Add';
+                    // }
+
+
+                    cardDesc.append(title,priceCard);
+                    // CatalogGridItem.append(imgLinc, cardDesc, btnAdd);
+                    CatalogGridItem.append(imgLinc, cardDesc);
+                    catalogGrid.append(CatalogGridItem);
+                    
+                    // btnAdd.addEventListener('click', () => {
+                    //     import('./Card.js')
+                    //         .then(module => {
+                    //             if (module.addCard(d)){
+                    //                 btnAdd.innerText = 'Added';
+                    //                 btnAdd.disabled = true;
+                    //             }
+                    //         })
+                    // })
+                    
+                    // console.log(data[i]);
+                }
+            }
+            
+        }
+
+        function renderAccessories(data) {
+
+            // data = data.filter(careFilter);
+            // console.log(data)
+    
+            for (let i = 0; i < data.length; i++) {
+                if(data[i].data.category === 'accessories') {
+
+                    let CatalogGridItem = document.createElement('div');
+                    CatalogGridItem.classList.add('catalog-grid-item');
+                    let imgLinc = document.createElement('a');
+                    imgLinc.setAttribute('href', `#productcard/${data[i].id}`); 
+                    let img = document.createElement('img');
+                    img.classList.add('card_img');
+                    img.setAttribute('src', data[i].data.img);
+                    imgLinc.append(img);
+                    let cardDesc = document.createElement('div');
+                    cardDesc.classList.add('card_description');
+                    let titleLinc = document.createElement('a');
+                    titleLinc.setAttribute('href', `#productcard/${data[i].id}`); 
+                    titleLinc.innerText = data[i].data.name;
+                    let title = document.createElement('h2');
+                    title.classList.add('card_title');
+                    title.append(titleLinc)
+                    let priceCard = document.createElement('p');
+                    priceCard.classList.add('card_price');
+                    priceCard.innerText = data[i].data.price;
+
+                    // let btnAdd = document.createElement('button');
+                    // btnAdd.classList.add('btn-catalog-add');
+                    // if (localCard && localCard.some(data => data[i].id === data[i].id)){
+                    //     btnAdd.innerText = 'Added';
+                    //     btnAdd.disabled = true;
+                    // }else{
+                    //     btnAdd.innerText = 'Add';
+                    // }
+
+
+                    cardDesc.append(title,priceCard);
+                    // CatalogGridItem.append(imgLinc, cardDesc, btnAdd);
+                    CatalogGridItem.append(imgLinc, cardDesc);
+                    catalogGrid.append(CatalogGridItem);
+                    
+                    // btnAdd.addEventListener('click', () => {
+                    //     import('./Card.js')
+                    //         .then(module => {
+                    //             if (module.addCard(d)){
+                    //                 btnAdd.innerText = 'Added';
+                    //                 btnAdd.disabled = true;
+                    //             }
+                    //         })
+                    // })
+                    
+                    // console.log(data[i]);
+                }
+            }
+            
+        }
+
+        // renderCare(data);
+
         data.forEach(d => {
             let CatalogGridItem = document.createElement('div');
             CatalogGridItem.classList.add('catalog-grid-item');

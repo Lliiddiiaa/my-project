@@ -2,15 +2,15 @@ function Workprocess(){
 
     this.title = 'Workprocess'
     
-    // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
+    
     const header = document.querySelector('header');
     header.classList.remove('home_header');
     const homeSlider = document.getElementById('home-slider');
     homeSlider.classList.remove('home_slider');
     const homeLogo = document.getElementById('logo-header');
-    // console.log(homeLogo)
+    
     homeLogo.classList.remove('logo-white');
-    // ----------------------------------------------------------------КАК СДЕЛАТЬ ТАК, ЧТОБЫ ЭТО ВЫПОЛНИЛОСЬ БЕЗ ПЕРЕЗАГРУЗКИ
+    
     const elem = document.createElement('div');
     elem.classList.add('workprocess_component');
     elem.innerHTML = `

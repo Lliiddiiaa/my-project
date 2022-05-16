@@ -32,13 +32,13 @@ function Main(){
 
     window.addEventListener('hashchange', routing);
 
-    window.addEventListener('load', () => { //Событие наожидание загрузки DOM - дерева
-        const a = document.querySelectorAll('a[href="\"]'); // Собираем все гиперссылки с адресом домашней страницы
-        a.forEach(a => { // Добавляем на них событие
+    window.addEventListener('load', () => {
+        const a = document.querySelectorAll('a[href="\"]'); 
+        a.forEach(a => { 
             a.addEventListener('click', e => {
                 e.preventDefault();
-                location.hash = ''; // Удаляем хеш с адреса
-                // window.history.pushState('', '', '/');
+                location.hash = ''; 
+                
                 routing();
             })
         })

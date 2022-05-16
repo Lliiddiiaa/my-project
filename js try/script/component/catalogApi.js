@@ -24,7 +24,7 @@ const analytics = getAnalytics(app);
 
 const db = getFirestore(app);
 
-// console.log(db);
+
 
 let data = [];
 
@@ -46,17 +46,12 @@ async function catalogData(){
     if (data.length === 0){
         data = dataDb;
     }
-    // console.log(data);
+    
     
     return data;
 }
 
-async function itemApi(id){ //-------------------------------------------------????
-    // return await fetch(`https://fakestoreapi.com/products/${id}`)
-    //     .then(resp => resp.json())
-    //     .then(data => {
-    //         return data;
-    //     })
+async function itemApi(id){ 
     return await getDoc(doc(db, 'boltaeva-shop-firebase', id))
 }
 

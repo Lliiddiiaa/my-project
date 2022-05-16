@@ -6,7 +6,12 @@
     padding-top: 52px;
 }
 
+.filters-nav li {
+    margin-left: 25px;
+}
+
 .filters-nav {
+    list-style-type: none;
     background-color:#EEE4DA;
     display: flex;
     justify-content: center;

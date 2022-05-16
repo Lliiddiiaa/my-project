@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     display: flex;
     justify-content: center;
@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     height: 100vh;
     background-color: #000;
-  }
+  } */
   
   #sliderWrapper {
     display: flex;

@@ -44,14 +44,15 @@ function Header(){
                     </div>
                     <div class="arrow arrow-right next"><img src="./img/arrow-right.png" alt="arrow-right"></div>
                 </div>
+                <div class="slider-dots">
+                    <span class="slider-dots_item"></span> 
+                    <span class="slider-dots_item"></span> 
+                    <span class="slider-dots_item"></span> 
+                    <span class="slider-dots_item"></span> 
+                    <span class="slider-dots_item"></span> 
+                </div>
             </div>
-        <div class="slider-dots">
-            <span class="slider-dots_item"></span> 
-            <span class="slider-dots_item"></span> 
-            <span class="slider-dots_item"></span> 
-            <span class="slider-dots_item"></span> 
-            <span class="slider-dots_item"></span> 
-        </div>
+        
         </header>
 
 

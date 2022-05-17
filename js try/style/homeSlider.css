@@ -10,11 +10,12 @@
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 45%;
+    margin-top: 157px;
 }
 .slider .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: 100px;
+    border-radius: 45%;
 }
 
 .slider .prev:hover,
@@ -30,6 +31,11 @@
     top: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+
+.slideText h1 {
+    color: white !important;
+    padding-top: 297px;
 }
 
 .slider-dots {
@@ -82,3 +88,4 @@ color: white;
 .hide-dots {
     display: none;
 }
+

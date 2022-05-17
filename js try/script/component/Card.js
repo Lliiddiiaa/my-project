@@ -16,7 +16,7 @@ function Card(){
     this.prices = [];
     this.title = 'Card'
     const elem = document.createElement('div');
-    elem.classList.add('about_component');
+    elem.classList.add('card_component');
     elem.innerHTML = `
         <h1>Card</h1>
     `
@@ -26,35 +26,39 @@ function Card(){
     totalPrice.classList.add('total_price');
 
     this.render = (data) => {
+
+    const header = document.querySelector('header');
+    header.classList.remove('home_header');
+    const homeSlider = document.getElementById('home-slider');
+    homeSlider.classList.remove('home_slider');
+    const homeLogo = document.getElementById('logo-header');
+    // console.log(homeLogo)
+    homeLogo.classList.remove('logo-white');
+
         cardItems.innerHTML = '';
         this.prises = [];
         this.card.forEach(data => {
+            console.log(data)
+            console.log(data.id)
+            console.log(data.data.img)
+            console.log(data.data.price)
             let cardItem = document.createElement('div');
             cardItem.classList.add('card_item');
             cardItem.innerHTML = `
                 <div class="item_image">
-                    <img src="${data.image}" alt="#">
+                    <img src="${data.data.img}" alt="#">
                 </div>
                 <div>
-                    <h2>${data.title}</h2>
+                    <h2>${data.data.name}</h2>
                 </div>
             `
-            // this.card.forEach(data => {
-            //     let cardItem = document.createElement('div');
-            //     cardItem.classList.add('card_item');
-            //     cardItem.innerHTML = `
-            //         <div class="item_image">
-            //             <img src="${d.data.img}" alt="#">
-            //         </div>
-            //         <div>
-            //             <h2>${d.data.name}</h2>
-            //         </div>
-            //     `
 
             let tPrice = document.createElement('div');
             tPrice.classList.add('t_price');
             // tPrice.innerText = `${d.data.price * (data.count ? data.count : 1)}$`;
-            tPrice.innerText = `${data.price * (data.count ? data.count : 1)}$`;
+            // console.log(data.data.price)
+            // console.log(data.count)
+            tPrice.innerText = `${data.data.price * (data.count ? data.count : 1)}$`;
             this.prices.push(parseFloat(tPrice.innerText));
             let counter = document.createElement('input');
             counter.setAttribute('type', 'number')
@@ -114,12 +118,13 @@ function Card(){
     }
 }
 
-let elem = new Card();
-let init = elem.init();
-let widget = elem.cardWidget();
-let addCard = elem.addCard;
-let title = elem.title;
+let elem = Card;
+// let init = elem.init();
+let widget = new Card().cardWidget();
+let addCard = new Card().addCard;
+let title = new elem().title;
 let returnHeader = elem.returnHeader;
 
-export default init;
+export default elem;
 export {widget, addCard, title}
+

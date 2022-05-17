@@ -176,6 +176,8 @@ function Home(){
                 let btnAdd = document.createElement('button');
                 btnAdd.classList.add('btn-catalog-add');
                 if (localCard && localCard.some(d => d.id === d.id)){
+                    console.log(d)
+                    console.log(d.id)
                     btnAdd.innerText = 'Added';
                     btnAdd.disabled = true;
                 }else{

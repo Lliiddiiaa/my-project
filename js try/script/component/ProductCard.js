@@ -3,6 +3,7 @@ import spinner from "./spinner.js";
 import {addCard} from "./Card.js";
 // import lineSlider from "./script.js";
 
+
 function Catalog(){
     //не находит элементы
     // const header = document.querySelector('header');
@@ -188,8 +189,8 @@ function Catalog(){
         quoteSlider.innerHTML = `
             <p>We care about your beauty, so we recommend that you consider other products</p>
             <div class="arrows">
-                <a href="" class="arrow-left"> <img src="../img/arrow-left.png" alt="arrow-left"> </a>
-                <a href="" class="arrow-right"> <img src="../img/arrow-right.png" alt="arrow-right"> </a>
+                <div class="arrow-left prev"> <img src="../img/arrow-left.png" alt="arrow-left"> </div>
+                <div class="arrow-right next"> <img src="../img/arrow-right.png" alt="arrow-right"> </div>
             </div>
         `
         
@@ -276,11 +277,13 @@ function Catalog(){
                             }
                         })
                 })
+
+                
             })
         }
 
         render(dataDb);
-
+       
         
 
         // const ArrowRight = document.createElement('button');
@@ -346,7 +349,7 @@ function Catalog(){
 
 
     this.render = (id) => {
-        this.ren(id)
+        this.ren(id);
         return elem;
     }
 

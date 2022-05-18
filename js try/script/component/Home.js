@@ -84,7 +84,9 @@ function Home(){
     
                 let btnAdd = document.createElement('button');
                 btnAdd.classList.add('btn-catalog-add');
+                // if (localCard && localCard.some(d => d.id === data.id)){
                 if (localCard && localCard.some(d => d.id === d.id)){
+                    // console.log(localCard.some(d => d.id === d.id))
                     btnAdd.innerText = 'Added';
                     btnAdd.disabled = true;
                 }else{
@@ -176,8 +178,8 @@ function Home(){
                 let btnAdd = document.createElement('button');
                 btnAdd.classList.add('btn-catalog-add');
                 if (localCard && localCard.some(d => d.id === d.id)){
-                    console.log(d)
-                    console.log(d.id)
+                    // console.log(d)
+                    // console.log(d.id)
                     btnAdd.innerText = 'Added';
                     btnAdd.disabled = true;
                 }else{
@@ -280,7 +282,7 @@ function Home(){
 
 let elem = Home;
 let init = elem.init;
-let title = elem.title;
+let title = new elem().title;
 let returnHeader = elem.returnHeader;
 
 export default elem;

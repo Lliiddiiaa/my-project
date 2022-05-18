@@ -1,15 +1,4 @@
-function Card(){
-    
-    // ----------------------------------------------------------------не находит элементы вообще
-    // const header = document.querySelector('header');
-    // header.classList.remove('home_header');
-    // const homeSlider = document.getElementById('home-slider');
-    // homeSlider.classList.remove('home_slider');
-    // const homeLogo = document.getElementById('logo-header');
-    // // console.log(homeLogo)
-    // homeLogo.classList.remove('logo-white');
-    
-    // ----------------------------------------------------------------
+function Card(){ //моя корзина
 
     this.card = [];
     this.totalPrice = 0;
@@ -32,16 +21,17 @@ function Card(){
     const homeSlider = document.getElementById('home-slider');
     homeSlider.classList.remove('home_slider');
     const homeLogo = document.getElementById('logo-header');
-    // console.log(homeLogo)
+   
     homeLogo.classList.remove('logo-white');
 
         cardItems.innerHTML = '';
         this.prises = [];
         this.card.forEach(data => {
-            console.log(data)
-            console.log(data.id)
-            console.log(data.data.img)
-            console.log(data.data.price)
+            // console.log(data)
+            // console.log(data.id)
+            // console.log(data.data.img)
+            // console.log(data.data.price)
+            console.log(this.card)
             let cardItem = document.createElement('div');
             cardItem.classList.add('card_item');
             cardItem.innerHTML = `
@@ -55,9 +45,7 @@ function Card(){
 
             let tPrice = document.createElement('div');
             tPrice.classList.add('t_price');
-            // tPrice.innerText = `${d.data.price * (data.count ? data.count : 1)}$`;
-            // console.log(data.data.price)
-            // console.log(data.count)
+           
             tPrice.innerText = `${data.data.price * (data.count ? data.count : 1)}$`;
             this.prices.push(parseFloat(tPrice.innerText));
             let counter = document.createElement('input');
@@ -84,27 +72,19 @@ function Card(){
         return elem;
     }
 
-    this.cardWidget = () => {
-        let elem = document.createElement('li');
-        elem.classList.add('card_widget');
-        elem.classList.add('right-item');
-        elem.innerHTML = `
-            <span>${this.card.length}</span>
-        `
-
-        return elem;
-    }
-
     this.addCard = (obj) =>{
 
         if (obj) {
             obj.count = 1;
             this.card.push(obj);
+            console.log(this.card)
         }
         let count = document.querySelector('.card_widget').lastElementChild;
         count.innerText = this.card.length;
+        console.log(count)
 
         localStorage.setItem('card', JSON.stringify(this.card));
+        console.log(this.card)
 
         let flag = this.card.some(data => data.id === obj.id);
         return flag;
@@ -112,10 +92,28 @@ function Card(){
 
     this.init = () => {
         if (localStorage.getItem('card')){
+            console.log(localStorage.getItem('card'))
+            console.log(this)
             this.card = JSON.parse(localStorage.getItem('card'));
+            console.log(this.card)
         }
         return this.render();
     }
+
+    this.cardWidget = () => {
+        let elem = document.createElement('li');
+        elem.classList.add('card_widget');
+        elem.classList.add('right-item');
+        console.log(this.card.length) //0
+        elem.innerHTML = `
+            <span>${this.card.length}</span>
+        `
+        console.log(elem)
+
+        return elem;
+    }
+
+    
 }
 
 let elem = Card;

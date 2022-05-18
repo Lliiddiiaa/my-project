@@ -49,7 +49,7 @@ function BonusProgram(){
 
 let elem = BonusProgram;
 let init = elem.init;
-let title = elem.title;
+let title = new elem().title;
 let returnHeader = elem.returnHeader;
 
 export default elem;

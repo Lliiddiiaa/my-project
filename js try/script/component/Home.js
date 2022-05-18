@@ -1,6 +1,7 @@
 import {catalogData} from "./catalogApi.js";
 import spinner from "./spinner.js";
 
+
 function Home(){
     this.title ='Home'
     const header = document.querySelector('header');
@@ -85,12 +86,13 @@ function Home(){
                 let btnAdd = document.createElement('button');
                 btnAdd.classList.add('btn-catalog-add');
                 // if (localCard && localCard.some(d => d.id === data.id)){
-                if (localCard && localCard.some(d => d.id === d.id)){
+                if (localCard && localCard.some(d => d.id === data.id)){
                     // console.log(localCard.some(d => d.id === d.id))
                     btnAdd.innerText = 'Added';
                     btnAdd.disabled = true;
                 }else{
                     btnAdd.innerText = 'Add';
+                    btnAdd.disabled = false;
                 }
     
     
@@ -177,12 +179,13 @@ function Home(){
     
                 let btnAdd = document.createElement('button');
                 btnAdd.classList.add('btn-catalog-add');
-                if (localCard && localCard.some(d => d.id === d.id)){
+                if (localCard && localCard.some(d => d.id === data.id)){
                     // console.log(d)
                     // console.log(d.id)
                     btnAdd.innerText = 'Added';
                     btnAdd.disabled = true;
                 }else{
+                    btnAdd.disabled = false;
                     btnAdd.innerText = 'Add';
                 }
     

@@ -1,13 +1,13 @@
 function Delivery(){
     this.title = 'Delivery'
    
-    const header = document.querySelector('header');
-    header.classList.remove('home_header');
-    const homeSlider = document.getElementById('home-slider');
-    homeSlider.classList.remove('home_slider');
-    const homeLogo = document.getElementById('logo-header');
+    // const header = document.querySelector('header');
+    // header.classList.remove('home_header');
+    // const homeSlider = document.getElementById('home-slider');
+    // homeSlider.classList.remove('home_slider');
+    // const homeLogo = document.getElementById('logo-header');
     
-    homeLogo.classList.remove('logo-white');
+    // homeLogo.classList.remove('logo-white');
     
     const elem = document.createElement('div');
     elem.classList.add('delivery_component');

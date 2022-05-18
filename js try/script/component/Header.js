@@ -67,4 +67,14 @@ function Header(){
     }
 }
 
-export default new Header().init()
+// let elem = Header;
+// let init = elem.init;
+// export default elem;
+// export {init};
+
+export default new Header().init() // ТАК БЫЛО 
+
+
+
+
+

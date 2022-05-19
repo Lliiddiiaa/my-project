@@ -1,28 +1,27 @@
 function Contacts(){
     this.title = 'Contacts'
-
-
     const header = document.querySelector('header');
     header.classList.remove('home_header');
     const homeSlider = document.getElementById('home-slider');
     homeSlider.classList.remove('home_slider');
     const homeLogo = document.getElementById('logo-header');
-    
+    // console.log(homeLogo)
     homeLogo.classList.remove('logo-white');
 
+
     ymaps.ready(function() {
-        
+
         var myMap = new ymaps.Map("map", {
             center: [25.18, 55.25],
             zoom: 12
         }, {
             searchControlProvider: 'yandex#search'
     }),
-    
+
     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
         '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
     ),
-    
+
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
         hintContent: 'Собственный значок метки',
         balloonContent: 'Это красивая метка'
@@ -32,12 +31,12 @@ function Contacts(){
         iconImageSize: [42, 42],
         iconImageOffset: [-5, -38]
     });
-    
+
     myMap.geoObjects
     .add(myPlacemark);
-       
+
     });
-    
+
     const elem = document.createElement('div');
     elem.classList.add('contacts_component');
     elem.innerHTML = `

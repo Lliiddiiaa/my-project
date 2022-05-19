@@ -77,7 +77,7 @@ function Card(){
             // console.log(localStorage.getItem('card'))
             // console.log(this)
             this.card = JSON.parse(localStorage.getItem('card'));
-            console.log(JSON.parse(localStorage.getItem('card')));
+            // console.log(JSON.parse(localStorage.getItem('card')));
             // console.log(this.card)
         }
         let elem = document.createElement('li');

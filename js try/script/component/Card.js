@@ -15,7 +15,7 @@ function Card(){
     const totalPrice = document.createElement('div');
     totalPrice.classList.add('total_price');
 
-    this.render = (data) => {
+    this.render = () => {
 
     // const header = document.querySelector('header');
     // header.classList.remove('home_header');
@@ -73,6 +73,13 @@ function Card(){
     }
 
     this.cardWidget = () => {
+        if (localStorage.getItem('card')){
+            // console.log(localStorage.getItem('card'))
+            // console.log(this)
+            this.card = JSON.parse(localStorage.getItem('card'));
+            console.log(JSON.parse(localStorage.getItem('card')));
+            // console.log(this.card)
+        }
         let elem = document.createElement('li');
         elem.classList.add('card_widget');
         elem.classList.add('right-item');
@@ -117,12 +124,12 @@ function Card(){
 }
 
 let elem = Card;
-let init = new Card().init();
+// let init = new Card().init();
 let widget = new Card().cardWidget();
 let addCard = new Card().addCard;
 let title = new elem().title;
 let returnHeader = elem.returnHeader;
 
 export default elem;
-export {widget, addCard, title, init}
+export {widget, addCard, title}
 

@@ -2,3 +2,69 @@
     background-color: #F5ECE3;
 }
 
+
+.card_component .request-col1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_component .logo-input {
+    margin-bottom: 70px;
+}
+
+.card_component .request-col1 h3 {
+    font-size: 36px;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+.card_component .input-card p {
+    font-size: 13px;
+    line-height: 110%;
+    color: #AC8F78;
+    margin-bottom: 15px;
+}
+
+.card_component .input-card input {
+    height: 46px;
+    background-color: #F5ECE3;
+    border: none;
+    border-bottom:#AC8F78 solid 1px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.card_component .btn-request {
+    width: 362px;
+    height:80px;
+    border: none;
+    background: #EEE4DA;
+    backdrop-filter: blur(14px);
+    border-radius: 66px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 24px;
+    color: #555555;
+}
+
+.card_component .btn-request p {
+    width: 165px;
+    margin: 0 auto;
+}
+
+.card_component .btn-request p::after {
+    content: "";
+    position: relative;
+    float: right;
+    margin: 2px 5px 0 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/btn-arrow-right.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+

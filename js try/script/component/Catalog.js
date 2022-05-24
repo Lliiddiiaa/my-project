@@ -110,7 +110,7 @@ function Catalog(){
             title.append(titleLinc)
             let priceCard = document.createElement('p');
             priceCard.classList.add('card_price');
-            priceCard.innerText = d.data.price;
+            priceCard.innerText = d.data.price + '$';
 
             let btnAdd = document.createElement('button');
             btnAdd.classList.add('btn-catalog-add');

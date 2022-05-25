@@ -61,24 +61,99 @@ function Card(){
 
     let settings = document.createElement('div');
     settings.classList.add('card_settings');
-    settings.innerHTML = `
-        <div class="set-wrapper">
-            <div class="settingblock1">
-                <div class="favour">
-                    <button><p>Add all products to favorites</p></button>
-                </div>
-                <h4>Set up in a couple of minutes</h4>
-                <p>If you are already registered on the site, then you just need to enter your profile so as not to enter information again.</p>
-                <button class="btn-card-signin"><p>Sign in</p></button>
-            </div>
-            <div class="shipping">
-                <h4>Choose a shipping method</h4>
-                <input>
-                <input>
-                <p class="comment">Shipping cost is calculated individually by the manager</p>
-            </div>
+    // settings.innerHTML = `
+    //     <div class="set-wrapper">
+    //         <div class="settingblock1">
+    //             <div class="favour">
+    //                 <button><p>Add all products to favorites</p></button>
+    //             </div>
+    //             <h4>Set up in a couple of minutes</h4>
+    //             <p>If you are already registered on the site, then you just need to enter your profile so as not to enter information again.</p>
+    //             <button class="btn-card-signin"><p>Sign in</p></button>
+    //         </div>
+    //         <div class="shipping">
+    //             <h4>Choose a shipping method</h4>
+    //             <input>
+    //             <input>
+    //             <p class="comment">Shipping cost is calculated individually by the manager</p>
+    //         </div>
+    //     </div>
+    // `
+
+    let setWrapper = document.createElement('div');
+    setWrapper.classList.add('set-wrapper');
+    settings.append(setWrapper);
+
+    let block1 = document.createElement('div');
+    block1.classList.add('settingblock1');
+    block1.innerHTML = `
+        <div class="favour">
+            <button><p>Add all products to favorites</p></button>
         </div>
+        <h4>Set up in a couple of minutes</h4>
+        <p>If you are already registered on the site, then you just need to enter your profile so as not to enter information again.</p>
+        <button class="btn-card-signin"><p>Sign in</p></button>
     `
+    
+    let shipping = document.createElement('div');
+    shipping.classList.add('shipping');
+
+    let shiph4 = document.createElement('h4');
+    shiph4.innerText = 'Choose a shipping method';
+
+    let companyChoice = ['FedEX', 'DHL', 'PonyExpress'];
+    let deliveryMethod = ['To door', 'Plane', 'Taxi', 'Train'];
+
+    function createSelects(data) {
+        return data.map(elem => {
+            let option = document.createElement('option');
+            option.setAttribute('value',elem);
+            option.innerText = elem;
+            console.log(option)
+            return option;
+        })
+    }
+    
+    let company = document.createElement('select');
+    company.setAttribute('class','inputs');
+    company.setAttribute('name','company');
+    company.required = 'true';
+    
+    let companyOptions = createSelects(companyChoice);
+    companyOptions.map(option => {
+        company.append(option)
+    })
+
+    let select1 = document.createElement('div');
+    select1.classList.add('select');
+
+    let select2 = document.createElement('div');
+    select2.classList.add('select');
+
+    let typeDelivery = document.createElement('select');
+    typeDelivery.setAttribute('class','inputs');
+    typeDelivery.setAttribute('name','typeDelivery');
+    typeDelivery.required = 'true';
+    
+    let typeDeliveryOptions = createSelects(deliveryMethod);
+    typeDeliveryOptions.map(option => {
+        typeDelivery.append(option)
+    })
+
+
+    select1.append(company);
+    select2.append(typeDelivery);
+
+    let br = document.createElement('br');
+
+    let shipP = document.createElement('p');
+    shipP.innerText = 'Shipping cost is calculated individually by the manager';
+    shipP.classList.add('comment');
+
+    
+    shipping.append(shiph4,select1,br, select2, shipP);
+
+    setWrapper.append(block1,shipping);
 
     let orderblock = document.createElement('div');
     orderblock.classList.add('orderBlock');
@@ -92,7 +167,10 @@ function Card(){
     orderTop.innerHTML = `
                 <h2>Order</h2>
                 <p>${this.card.length} product(s)</p>
-                <div class="order-arrows"></div>
+                <div class="arrows">
+                    <a href="" class="arrow-left"> <img src="../../img/bej-arrow-left.png" alt="arrow-left"> </a>
+                    <a href="" class="arrow-right"> <img src="../../img/bej-arrow-right.png" alt="arrow-right"> </a>
+                </div>
     `
 
     let items = document.createElement('div');
@@ -105,6 +183,7 @@ function Card(){
    `
     
    let btnOrder = document.createElement('button');
+   btnOrder.classList.add('btn-order');
    btnOrder.innerHTML = `
         <p>Send your order</p>
    `
@@ -115,25 +194,6 @@ function Card(){
 
 
     orderWrapper.append(orderTop,items,total,btnOrder,orderComment);
-
-
-
-    // orderblock.innerHTML = `
-    //     <div class="order_wrapper">
-    //         <div class="order-top">
-    //             <h2></h2>
-    //             <p></p>
-    //             <div class="order-arrows"></div>
-    //         </div>
-    //         <div class="items"></div>
-    //         <div class="total">
-    //             <p></p>
-    //             <div class="total_price"></div>
-    //         </div>
-    //         <button><p>Send your order</p></button>
-    //         <p class="comment">Edit this order</p>
-    //     </div>
-    // `
 
     wrapper.append(requestBlock,settings,orderblock);
 
@@ -164,6 +224,7 @@ function Card(){
                     data.count = +counter.value;
                     this.render();
                     localStorage.setItem('card', JSON.stringify(this.card));
+                    window.location.reload (); 
                     console.log(counter)
                 }else{
                     counter.value = 1;

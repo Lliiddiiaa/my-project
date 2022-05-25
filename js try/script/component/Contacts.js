@@ -1,4 +1,6 @@
 function Contacts(){
+
+    
     this.title = 'Contacts'
     const header = document.querySelector('header');
     header.classList.remove('home_header');

@@ -107,6 +107,11 @@
     background-repeat: no-repeat;
 }
 
+.category-desc .arrow-right {
+    position: relative;
+    margin-left: 10px;
+}
+
 .home_component .care-category {
     background-image: url(../img/care-card.png);
 }

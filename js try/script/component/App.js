@@ -2,8 +2,6 @@ import Header from "./Header.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
 import initSlider from "./homeSlider.js";
-// import popup from "./popup.js";
-// import pusk from "./scrpt.js";
 // import lineSlider from "./script.js";
 
 function App(){
@@ -24,7 +22,6 @@ function App(){
         render(Header, Main, Footer);
         initSlider();
         // lineSlider();
-        // popup();
     }
 
 }

@@ -1,4 +1,4 @@
-// import popup from "./popup.js";
+
 
 function Partners(){
 
@@ -57,168 +57,14 @@ function Partners(){
         </div>
     </main>
     `
-
-    // function popup() {
-    //     const elems = document.querySelectorAll('[data-popup]');
-    //     console.log(elems)
-    
-    //     const show = function (content){
-    //         let popupElem = document.createElement('div');
-    //         let modalElem = document.createElement('div');
-    //         let closeElem = document.createElement('div');
-    //         let contentElem = document.createElement('div');
-    
-    //         popupElem.setAttribute('class', 'popup');
-    //         modalElem.setAttribute('class', 'popup-modal');
-    //         closeElem.setAttribute('class', 'popup-close');
-    //         contentElem.setAttribute('class', 'popup-content');
-    
-    //         closeElem.innerText = 'X';
-    //         contentElem.innerHTML = content;
-    
-    //         modalElem.append(closeElem, contentElem);
-    //         popupElem.append(modalElem);
-    
-    //         document.body.append(popupElem)
-    
-    //         popupElem.addEventListener('click', close);
-    //     }
-    
-    //     function close(event){
-    //         if(!event.target.classList.contains('popup') && !event.target.classList.contains('popup-close')) return;
-    
-    //         const popupElem = document.querySelector('.popup')
-    //         if(!popupElem) return;
-    //         popupElem.remove();
-    //     }
-    
-    //     const clickHandler = function (event){
-    //         event.preventDefault();
-    
-    //         let elem = event.target;
-    //         let type = elem.dataset.popup;
-    //         console.log(type)
-    
-    //         if(!type){
-    //             let parent = elem.closest('[data-popup]');
-    
-    //             if(!parent) return;
-    
-    //             type = parent.dataset.popup
-    //             console.log(type)
-    
-    //             if(!type) return;
-    
-    //             elem = parent;
-    //         }
-    
-    //         let content = '';
-    
-    //         if(type === 'zoom'){
-    //             const href = elem.href;
-    
-    //             if(!href) return;
-    
-    //             content = `<img src="${href}" alt="#">`;
-    //         }
-    
-    //         if(type === 'content'){
-    //             let id = elem.dataset.id;
-    
-    //             if(!id) return;
-    
-    //             const idContent = document.querySelector(`#${id}`);
-    
-    //             if(!idContent) return;
-    
-    //             content = idContent.innerHTML;
-    //         }
-    
-    //         show(content);
-    //     }
-    
-    //     elems.forEach(elem => {
-    //         elem.addEventListener('click', clickHandler);
-    //     });
-    // }
-
-    let wrappe = document.createElement('div');
-    wrappe.classList.add('wrappe');
-    wrappe.innerHTML = `
-        <a href="#" class="open-popup">Открыть попап</a>
-        <a href="#" class="open-popup">Открыть попап</a>
-        <a href="#" class="open-popup">Открыть попап</a>
-
-    `
-
-
-    let popupBG = document.createElement('div');
-    popupBG.classList.add('popup__bg');
-    popupBG.innerHTML = `
-    <form class="popup">
-            <svg class="close-popup" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#2982ff" d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-            <label>
-                <input type="text" name="name">
-                <div class="label__text">
-                    Ваше имя
-                </div>
-            </label>
-            <label>
-                <input type="tel" name="tel">
-                <div class="label__text">
-                    Ваш телефон
-                </div>
-            </label>
-            <label>
-                <textarea name="message"></textarea>
-                <div class="label__text">
-                    Ваше сообщение
-                </div>
-            </label>
-            <button type="submit">Отправить</button>
-        </form>
-
-    `
-
-
-    elem.append(wrappe, popupBG)
-
-    let popupBg = document.querySelector('.popup__bg');
-    let popup = document.querySelector('.popup');
-    let openPopupButtons = document.querySelectorAll('.open-popup');
-    let closePopupButton = document.querySelector('.close-popup');
-    console.log(openPopupButtons)
-    console.log(popup)
-
-    openPopupButtons.forEach((button) => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            popupBg.classList.add('active');
-            popup.classList.add('active');
-        })
-    });
-
-    closePopupButton.addEventListener('click',() => {
-        popupBg.classList.remove('active');
-        popup.classList.remove('active');
-    });
-
-    document.addEventListener('click', (e) => {
-        if(e.target === popupBg) {
-            popupBg.classList.remove('active');
-            popup.classList.remove('active');
-        }
-    });
-
     
     this.init = () => {
        
         return elem;
-        popup();
+    
     }
 
     this.init()
-    // window.onload = popup();
 
 }
 

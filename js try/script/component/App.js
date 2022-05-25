@@ -2,7 +2,7 @@ import Header from "./Header.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
 import initSlider from "./homeSlider.js";
-import popup from "./popup.js";
+// import popup from "./popup.js";
 // import pusk from "./scrpt.js";
 // import lineSlider from "./script.js";
 
@@ -20,21 +20,15 @@ function App(){
         elems.forEach(elem => root.appendChild(elem));
     }
 
-    popup();
-
     this.init = () => {
-        popup();
         render(Header, Main, Footer);
-        popup();
         initSlider();
         // lineSlider();
-        popup();
-        window.onload = popup();
+        // popup();
     }
 
-    popup();
 }
 
-window.onload = popup();
+
 
 export default App

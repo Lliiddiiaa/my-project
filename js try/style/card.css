@@ -32,13 +32,16 @@
 }
 
 .orderBlock {
-    width: 30%;
+    /* width: 30%; */
     background-color: #EAF4DA;
     /* padding-top: 140px; */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 53px;
+    padding: 0 70px ;
+    max-width: 30%;
+    min-width: 30% !important;
 }
 
 .card_component .request-col1 {
@@ -189,15 +192,18 @@
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 29px;
+    /* width: 80%; */
+    overflow: hidden;
 }
 
 .card_component .card_item {
     width: 102px;
-    height: 150px;
+    /* height: 150px; */
     /* background-color: #F5ECE3; */
     background-color: #EEE4DA;
     padding: 15px;
     margin-right: 6px;
+    /* min-width:30%; */
 }
 
 .card_component .card_item input {
@@ -264,6 +270,7 @@ select {
     line-height: 110%;
     color: #555555;
     margin-bottom: 28px;
+    margin-top: 29px;
 }
 
 .btn-order {
@@ -321,4 +328,17 @@ select {
 
 .order_wrapper .comment {
     width: 120px;
+}
+
+.order_wrapper {
+    width: 100%;
+}
+
+.items {
+    width: 100%;
+}
+
+.card_item .t_price,
+.card_item input {
+    display: none;
 }

@@ -72,7 +72,7 @@ function Header(){
 // export default elem;
 // export {init};
 
-export default new Header().init() // ТАК БЫЛО 
+export default new Header().init() 
 
 
 

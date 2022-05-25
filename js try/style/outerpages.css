@@ -1,3 +1,13 @@
+button:hover {
+    cursor: pointer;
+}
+
+a:hover {
+    color: #AC8F78 !important;
+    cursor: pointer;
+}
+
+
 .header,
 .main {
     background-color: #F5ECE3;

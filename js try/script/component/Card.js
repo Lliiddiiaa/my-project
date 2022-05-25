@@ -11,9 +11,9 @@ function Card(){
     } else this.card = [];
     
     elem.classList.add('card_component');
-    elem.innerHTML = `
-        <h1>Card</h1>
-    `
+    // elem.innerHTML = `
+    //     <h1>Card</h1>
+    // `
     const cardItems = document.createElement('div');
     cardItems.classList.add('card_items');
     const totalPrice = document.createElement('div');
@@ -30,6 +30,7 @@ function Card(){
     homeLogo.classList.remove('logo-white');
 
     let wrapper = document.createElement('div');
+    wrapper.classList.add('wrapper');
     elem.append(wrapper);
 
     let requestBlock = document.createElement('div');
@@ -37,15 +38,14 @@ function Card(){
     
     requestBlock.innerHTML = `
         <div class="request-content">
-            <div class="logo-input">
-                <a href="#">
-                    <img src="./img/about-logo.png" alt="logo">
-                </a>
-            </div>
-            <h3>Request a call back</h3>
+            <h1>Checkout</h1>
             <div class="input-card">
                 <p>Surname, name and patronymic</p>
                 <input type="text" placeholder="Rosa More|">
+            </div>
+            <div class="input-card">
+                <p>Country, city, address</p>
+                <input type="text" placeholder="UAE, Dubai, 54 st. 560 of.">
             </div>
             <div class="input-card">
                 <p>Contact number</p>
@@ -55,9 +55,6 @@ function Card(){
                 <p>Email</p>
                 <input type="email" placeholder="Rosamorena@gmail.com">
             </div>
-            <div class="wrapper-btn-request">
-                <button class="btn-request"><p>Request call</p></button>
-            </div>
         </div>
                 
     `
@@ -65,24 +62,80 @@ function Card(){
     let settings = document.createElement('div');
     settings.classList.add('card_settings');
     settings.innerHTML = `
-    
-        <div class="settingblock1">
-            <div class="favour">
-                <p>Add all products to favorites</p>
+        <div class="set-wrapper">
+            <div class="settingblock1">
+                <div class="favour">
+                    <button><p>Add all products to favorites</p></button>
+                </div>
+                <h4>Set up in a couple of minutes</h4>
+                <p>If you are already registered on the site, then you just need to enter your profile so as not to enter information again.</p>
+                <button class="btn-card-signin"><p>Sign in</p></button>
             </div>
-            <h4>Set up in a couple of minutes</h4>
-            <p>If you are already registered on the site, then you just need to enter your profile so as not to enter information again.</p>
-            <button>Sign in</button>
+            <div class="shipping">
+                <h4>Choose a shipping method</h4>
+                <input>
+                <input>
+                <p class="comment">Shipping cost is calculated individually by the manager</p>
+            </div>
         </div>
-        <div class="shipping">
-            <p>Choose a shipping method</p>
-            <input>
-            <input>
-            <p class="comment">Shipping cost is calculated individually by the manager</p>
-        </div>
-    
     `
-    wrapper.append(requestBlock,settings);
+
+    let orderblock = document.createElement('div');
+    orderblock.classList.add('orderBlock');
+
+    let orderWrapper = document.createElement('div');
+    orderWrapper.classList.add('order_wrapper');
+    orderblock.append(orderWrapper);
+
+    let orderTop = document.createElement('div');
+    orderTop.classList.add('order-top');
+    orderTop.innerHTML = `
+                <h2>Order</h2>
+                <p>${this.card.length} product(s)</p>
+                <div class="order-arrows"></div>
+    `
+
+    let items = document.createElement('div');
+    items.classList.add('items');
+
+    let total = document.createElement('div');
+   total.classList.add('total');
+   total.innerHTML = `
+        <p> Total: </p>
+   `
+    
+   let btnOrder = document.createElement('button');
+   btnOrder.innerHTML = `
+        <p>Send your order</p>
+   `
+
+   let orderComment = document.createElement('p');
+   orderComment.classList.add('comment');
+   orderComment.innerText = 'Edit this order';
+
+
+    orderWrapper.append(orderTop,items,total,btnOrder,orderComment);
+
+
+
+    // orderblock.innerHTML = `
+    //     <div class="order_wrapper">
+    //         <div class="order-top">
+    //             <h2></h2>
+    //             <p></p>
+    //             <div class="order-arrows"></div>
+    //         </div>
+    //         <div class="items"></div>
+    //         <div class="total">
+    //             <p></p>
+    //             <div class="total_price"></div>
+    //         </div>
+    //         <button><p>Send your order</p></button>
+    //         <p class="comment">Edit this order</p>
+    //     </div>
+    // `
+
+    wrapper.append(requestBlock,settings,orderblock);
 
 
     cardItems.innerHTML = '';
@@ -94,9 +147,6 @@ function Card(){
             <div class="item_image">
                 <img src="${data.data.img}" alt="#">
             </div>
-            <div>
-                <h2>${data.data.name}</h2>
-            </div>
         `
 
             let tPrice = document.createElement('div');
@@ -104,11 +154,9 @@ function Card(){
            
             tPrice.innerText = `${data.data.price * (data.count ? data.count : 1)}$`;
             this.prices.push(parseFloat(tPrice.innerText));
-            console.log(this.prices) // всё ок
             let counter = document.createElement('input');
             counter.setAttribute('type', 'number')
             counter.value = data.count ? data.count : 1;
-            console.log(counter.value)
 
             counter.addEventListener('change', () => {
                 if (counter.value > 0){
@@ -126,10 +174,9 @@ function Card(){
             cardItems.append(cardItem)
         })
 
-        // console.log(this.prices);
         totalPrice.innerText = `${this.prices.reduce((count, item) => count + item, 0).toFixed(2)} $`;
-        console.log(totalPrice.innerText) //выводится при открытии корзины
-        elem.append(cardItems, totalPrice);
+        items.append(cardItems);
+        total.append(totalPrice);
         return elem;
     }
 
@@ -165,7 +212,6 @@ function Card(){
     this.init = () => {
         if (localStorage.getItem('card')){
             this.card = JSON.parse(localStorage.getItem('card'));
-            // console.log(JSON.parse(localStorage.getItem('card')));
         }
         return this.render();
     }

@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Title</title>
-    <!-- <link rel="stylesheet" href="./style/style.css"> -->
     <link rel="stylesheet" href="./style/spinner.css">
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/footer.css">
@@ -20,56 +19,15 @@
     <link rel="stylesheet" href="./style/partnes.css">
     <link rel="stylesheet" href="./style/productCard.css">
     <link rel="stylesheet" href="./style/homeSlider.css">
-    <link rel="stylesheet" href="./style/stylec.css">
     <link rel="stylesheet" href="./style/card.css">
-    <link rel="stylesheet" href="./style/popup.css">
     <link rel="stylesheet" href="./style/popuptry.css">
 
     
     <script src="https://api-maps.yandex.ru/2.1/?apikey=e71f72b3-6dfe-4f03-b976-9bf62bf72372&lang=ru_RU" type="text/javascript"></script>
-    <script src="./script/component/popup.js"></script>
-    <script type="text/javascript"> 
-        function popupTry() {
-    
-        let popupBg = document.querySelector('.popup__bg');
-        let popup = document.querySelector('.popup');
-        let openPopupButtons = document.querySelectorAll('.open-popup');
-        let closePopupButton = document.querySelector('.close-popup');
-        console.log(openPopupButtons)
-        console.log(popup)
-    
-        openPopupButtons.forEach((button) => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                popupBg.classList.add('active');
-                popup.classList.add('active');
-            })
-        });
-    
-        closePopupButton.addEventListener('click',() => {
-            popupBg.classList.remove('active');
-            popup.classList.remove('active');
-        });
-    
-        document.addEventListener('click', (e) => {
-            if(e.target === popupBg) {
-                popupBg.classList.remove('active');
-                popup.classList.remove('active');
-            }
-        });
-
-    }
-    window.onload = popupTry;
-</script>
 </head> 
 <body>
 <div id="root"></div>
 </body>
-<script src="./script/component/scrpt.js"></script>
 <script src="./script/index.js" type="module"></script>
 <script src="./script/component/homeSlider.js"></script>
-<!-- <script src="./script/component/script.js"></script> -->
-<script>window.onload = popupTry;</script>
-
-
 </html>

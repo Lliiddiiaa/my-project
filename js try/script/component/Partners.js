@@ -26,8 +26,8 @@ function Partners(){
             <h1>Partnership information</h1>
             <img class="bc-img" src="../img/bc-partners.png" alt="partners">
             <p>The brand seeks to build respect among the audience for its products, so that the presence of the company's products is a sign of prestige, since the focus of the business is focused on exclusive sales, but not on the mass market. The brand seeks to build respect among the audience for its products, so that the presence of the company's products is a sign of prestige, since the focus of the business is focused on exclusive sales, but not on the mass market.</p>
-            <div class="btn-wrapper">
-                <button class="btn-partner" data-popup="content" data-id="partners">Become a partner</button>
+            <div class="btn-wrapper wrappe">
+                <button class="btn-partner"><a class="open-popup">Become a partner</a></button>
             </div>
             <div class="quote-text">
                 <p>Each Boltaeva brand product is truly unique - everything is thought out to the smallest detail </p>
@@ -48,23 +48,16 @@ function Partners(){
                 </div>
             </div>
         </div>
-        <div id="partners" class="popup-container">
-            <form>
-                <h3>Lorem ipsum dolor.</h3>
-                <input type="text" name="text" placeholder="Name">
-                <button type="submit">Send</button>
-            </form>
-        </div>
     </main>
     `
 
-    let wrappe = document.createElement('div');
-    wrappe.classList.add('wrappe');
-    wrappe.innerHTML = `
-        <a href="#" class="open-popup">Открыть попап</a>
-        <a href="#" class="open-popup">Открыть попап</a>
-        <a href="#" class="open-popup">Открыть попап</a>
-    `
+    // let wrappe = document.createElement('div');
+    // wrappe.classList.add('wrappe');
+    // wrappe.innerHTML = `
+    //     <a href="#" class="open-popup">Открыть попап</a>
+    //     <a href="#" class="open-popup">Открыть попап</a>
+    //     <a href="#" class="open-popup">Открыть попап</a>
+    // `
 
     let popupBG = document.createElement('div');
         popupBG.classList.add('popup__bg');
@@ -94,68 +87,67 @@ function Partners(){
         `
     
     
-    elem.append(wrappe, popupBG)
+    elem.append(popupBG)
 
-    // function popupTry() {
-    //     let popupBG = document.createElement('div');
-    //     popupBG.classList.add('popup__bg');
-    //     popupBG.innerHTML = `
-    //     <form class="popup">
-    //             <svg class="close-popup" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#2982ff" d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-    //             <label>
-    //                 <input type="text" name="name">
-    //                 <div class="label__text">
-    //                     Ваше имя
-    //                 </div>
-    //             </label>
-    //             <label>
-    //                 <input type="tel" name="tel">
-    //                 <div class="label__text">
-    //                     Ваш телефон
-    //                 </div>
-    //             </label>
-    //             <label>
-    //                 <textarea name="message"></textarea>
-    //                 <div class="label__text">
-    //                     Ваше сообщение
-    //                 </div>
-    //             </label>
-    //             <button type="submit">Отправить</button>
-    //         </form>
-    //     `
+    setTimeout( function popupTry() {
+        let popupBG = document.createElement('div');
+        popupBG.classList.add('popup__bg');
+        popupBG.innerHTML = `
+        <form class="popup">
+                <svg class="close-popup" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#AC8F78" d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+                <label>
+                    <input type="text" name="name">
+                    <div class="label__text">
+                        Surname, name and patronymic
+                    </div>
+                </label>
+                <label>
+                    <input type="tel" name="tel">
+                    <div class="label__text">
+                        Contact number
+                    </div>
+                </label>
+                <label>
+                    <textarea name="message"></textarea>
+                    <div class="label__text">
+                        Your message
+                    </div>
+                </label>
+                <button type="submit">Отправить</button>
+            </form>
+        `
     
     
-    //     elem.append(wrappe, popupBG)
+        
     
-    //     let popupBg = document.querySelector('.popup__bg');
-    //     let popup = document.querySelector('.popup');
-    //     let openPopupButtons = document.querySelectorAll('.open-popup');
-    //     let closePopupButton = document.querySelector('.close-popup');
-    //     console.log(openPopupButtons)
-    //     console.log(popup)
+        let popupBg = document.querySelector('.popup__bg');
+        let popup = document.querySelector('.popup');
+        let openPopupButtons = document.querySelectorAll('.open-popup');
+        let closePopupButton = document.querySelector('.close-popup');
+        console.log(openPopupButtons)
+        console.log(popup)
     
-    //     openPopupButtons.forEach((button) => {
-    //         button.addEventListener('click', (e) => {
-    //             e.preventDefault();
-    //             popupBg.classList.add('active');
-    //             popup.classList.add('active');
-    //         })
-    //     });
+        openPopupButtons.forEach((button) => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                popupBg.classList.add('active');
+                popup.classList.add('active');
+            })
+        });
     
-    //     closePopupButton.addEventListener('click',() => {
-    //         popupBg.classList.remove('active');
-    //         popup.classList.remove('active');
-    //     });
+        closePopupButton.addEventListener('click',() => {
+            popupBg.classList.remove('active');
+            popup.classList.remove('active');
+        });
     
-    //     document.addEventListener('click', (e) => {
-    //         if(e.target === popupBg) {
-    //             popupBg.classList.remove('active');
-    //             popup.classList.remove('active');
-    //         }
-    //     });
-    // }
+        document.addEventListener('click', (e) => {
+            if(e.target === popupBg) {
+                popupBg.classList.remove('active');
+                popup.classList.remove('active');
+            }
+        });
+    });
 
-    
     
     this.init = () => {
        

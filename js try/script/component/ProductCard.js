@@ -84,7 +84,7 @@ function Catalog(){
         const btnPlus = document.createElement('button');
         btnPlus.innerText = "+";
         const price = document.createElement('p');
-        price.innerText = data.price; 
+        price.innerText = data.price + '$'; 
         price.classList.add('pricetext');
         amountBlock.append(btnMinus,amount,btnPlus);
         order.append(amountBlock,price);
@@ -113,24 +113,6 @@ function Catalog(){
 
         contentWrapper.append(fv,productH1,order,btnAddCart,tabs);
 
-        // let productCard = document.createElement('div');
-        // productCard.classList.add('card_item');
-        // let img = document.createElement('img');
-        // img.classList.add('item_img');
-        // img.setAttribute('src', data.img);
-        // let desc = document.createElement('p');
-        // desc.innerText = data.description;
-        // let category = document.createElement('p');
-        // category.innerText = data.category;
-        // let title = document.createElement('h2');
-        // title.classList.add('card_title');
-        // title.innerText = data.name;
-        // let priceCard = document.createElement('p');
-        // priceCard.classList.add('card_price');
-        // priceCard.innerText = data.price;
-        // let btnAdd = document.createElement('button');
-
-
         // if (localCard.some(data => data.id === +id)){ // просмотрите структуру объекта дата и перепишите условие
         //     btnAdd.innerText = 'Added';
         //     btnAdd.disabled = true;
@@ -138,9 +120,7 @@ function Catalog(){
         //     btnAdd.innerText = 'Add';
         // }
 
-
-        // mainItem.append(title, category, img, desc, priceCard, btnAdd);
-
+        
         const infoblock1 = document.createElement('section');
         infoblock1.classList.add('infoblock1');
         infoblock1.innerHTML =`
@@ -251,7 +231,7 @@ function Catalog(){
                 title.append(titleLinc)
                 let priceCard = document.createElement('p');
                 priceCard.classList.add('card_price');
-                priceCard.innerText = d.data.price;
+                priceCard.innerText = d.data.price + '$';
 
                 let btnAdd = document.createElement('button');
                 btnAdd.classList.add('btn-catalog-add');

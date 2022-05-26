@@ -109,7 +109,7 @@ function Card(){
             let option = document.createElement('option');
             option.setAttribute('value',elem);
             option.innerText = elem;
-            console.log(option)
+            // console.log(option)
             return option;
         })
     }

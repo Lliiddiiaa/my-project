@@ -1,6 +1,6 @@
 .card_component {
     background-color: #F5ECE3;
-    padding-bottom: 120px;
+    /* padding-bottom: 120px; */
 }
 
 .card_component .wrapper {
@@ -42,6 +42,8 @@
     padding: 0 70px ;
     max-width: 30%;
     min-width: 30% !important;
+    padding-bottom: 120px;
+    padding-top: 109px;
 }
 
 .card_component .request-col1 {
@@ -189,11 +191,14 @@
 }
 
 .card_component .card_items {
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
     margin-bottom: 29px;
     /* width: 80%; */
     overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(102px, 1fr));
+    grid-gap: 6px;
 }
 
 .card_component .card_item {

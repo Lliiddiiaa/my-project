@@ -25,7 +25,7 @@
 
 .card_settings {
     width: 27%;
-    padding-right: 160px;
+    padding-right: 75px;
     display: flex;
     align-items: center;
     padding-top: 140px;
@@ -346,4 +346,59 @@ select {
 .card_item .t_price,
 .card_item input {
     display: none;
+}
+
+@media (max-width:1026px) {
+    
+    .card_settings {
+        width:50%;
+        padding-right: 45px;
+    }
+
+    .card_component .request-col1 {
+        width: 50%;
+    }
+
+
+    .orderBlock {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card_component .card_item {
+        padding: 0px;
+    }
+
+}
+
+
+@media (max-width:977px) {
+    
+    .card_component .wrapper {
+        display: block;
+    }
+
+    .card_settings,
+    .card_component .request-col1, 
+    .orderBlock {
+        margin: 0 auto;
+        width: 80%;
+        padding: 30px;
+    }
+}
+
+@media (max-width:426px) {
+    
+    .orderBlock {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+@media (max-width:325px) {
+
+    .card_component h2 {
+        font-size:29px !important;
+    }
+
 }

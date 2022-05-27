@@ -203,3 +203,18 @@ h1 {
         margin: 0 auto;
     }
 }
+
+@media (max-width:615px) {
+    
+    .filters-nav {
+        display: none;
+    }
+}
+
+@media (max-width:320px) {
+    
+    .catalog_component .catalog-grid {
+        grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+    }
+    
+}

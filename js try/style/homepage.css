@@ -49,14 +49,7 @@
 .home_slider {
     display: block;
     width: 100%;
-    /* justify-content: center; */
 }
-
-/* .home_slider .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 .home_header  .card-header-slider {
     width: 100%;
@@ -446,6 +439,13 @@
     
 }
 
+@media (max-width:565px) {
+
+    .header-slider .arrow {
+        display: none !important;
+    }
+}
+
 @media (max-width:426px) {
     
     .home_component .arrow {
@@ -464,11 +464,25 @@
     .home_component .insta-button-wrapper a {
         width: 75%;
     }
-}
-
-@media (max-width:426px) { 
 
     .home_component .wrapper {
         width: 100%;
+    }
+
+    .item-common {
+        display: none !important;
+    }
+
+    .category-item {
+        margin: 15px;
+    }
+
+    .category-item  .arrows{
+        display: none;
+    }
+
+    .instagram-quote p {
+        font-size: 30px;
+        line-height: 130%;
     }
 }

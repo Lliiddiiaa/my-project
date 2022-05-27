@@ -60,11 +60,11 @@ function Home(){
         function block1(data) {
             
             data = data.slice(0, 6);
-            // console.log(data);
 
             data.forEach(d => {
                 let CatalogGridItem = document.createElement('div');
                 CatalogGridItem.classList.add('catalog-grid-item');
+                CatalogGridItem.classList.add('item-common');
                 let imgLinc = document.createElement('a');
                 imgLinc.setAttribute('href', `#productcard/${d.id}`); 
                 let img = document.createElement('img');
@@ -85,9 +85,7 @@ function Home(){
     
                 let btnAdd = document.createElement('button');
                 btnAdd.classList.add('btn-catalog-add');
-                // if (localCard && localCard.some(d => d.id === data.id)){
                 if (localCard && localCard.some(g => g.id === d.id)){
-                    // console.log(localCard.some(d => d.id === d.id))
                     btnAdd.innerText = 'Added';
                     btnAdd.disabled = true;
                 }else{
@@ -159,6 +157,7 @@ function Home(){
             data.forEach(d => {
                 let CatalogGridItem = document.createElement('div');
                 CatalogGridItem.classList.add('catalog-grid-item');
+                CatalogGridItem.classList.add('item-common');
                 let imgLinc = document.createElement('a');
                 imgLinc.setAttribute('href', `#productcard/${d.id}`); 
                 let img = document.createElement('img');

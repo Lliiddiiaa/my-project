@@ -1,6 +1,5 @@
 .card_component {
     background-color: #F5ECE3;
-    /* padding-bottom: 120px; */
 }
 
 .card_component .wrapper {
@@ -32,9 +31,7 @@
 }
 
 .orderBlock {
-    /* width: 30%; */
     background-color: #EAF4DA;
-    /* padding-top: 140px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,10 +188,7 @@
 }
 
 .card_component .card_items {
-    /* display: flex;
-    justify-content: space-evenly; */
     margin-bottom: 29px;
-    /* width: 80%; */
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(102px, 1fr));
@@ -203,12 +197,9 @@
 
 .card_component .card_item {
     width: 102px;
-    /* height: 150px; */
-    /* background-color: #F5ECE3; */
     background-color: #EEE4DA;
     padding: 15px;
     margin-right: 6px;
-    /* min-width:30%; */
 }
 
 .card_component .card_item input {

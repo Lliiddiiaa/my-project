@@ -60,17 +60,11 @@ function Header(){
 
         
     `
-    // elem.append(widget)
 
     this.init = () => {
         return elem;
     }
 }
-
-// let elem = Header;
-// let init = elem.init;
-// export default elem;
-// export {init};
 
 export default new Header().init() 
 

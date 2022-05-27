@@ -1,7 +1,6 @@
 import {itemApi,catalogData} from "./catalogApi.js";
 import spinner from "./spinner.js";
 import {addCard} from "./Card.js";
-// import lineSlider from "./script.js";
 
 
 function Catalog(){
@@ -14,8 +13,6 @@ function Catalog(){
     const homeLogo = document.getElementById('logo-header');
     homeLogo.classList.remove('logo-white');
     })
-    
-    // window.onload()
 
     const elem = document.createElement('div');
     elem.classList.add('item_component');
@@ -178,22 +175,22 @@ function Catalog(){
         `
         
 
-        const products = document.createElement('section');
-        products.classList.add('products');
+        // const products = document.createElement('section');
+        // products.classList.add('products');
 
 
-        const productsSlider = document.createElement('div');
-        productsSlider.classList.add('sliderWrapper');
-        productsSlider.setAttribute('id','sliderWrapper');
-        products.append(productsSlider);
-        const catalogGrid = document.createElement('div');
-        catalogGrid.classList.add('catalog-grid');
-        catalogGrid.classList.add('carousel');
-        catalogGrid.setAttribute('id','carousel');
-        productsSlider.append(catalogGrid);
-        const content = document.createElement('div');
-        content.setAttribute('id','content');
-        catalogGrid.append(content);
+        // const productsSlider = document.createElement('div');
+        // productsSlider.classList.add('sliderWrapper');
+        // productsSlider.setAttribute('id','sliderWrapper');
+        // products.append(productsSlider);
+        // const catalogGrid = document.createElement('div');
+        // catalogGrid.classList.add('catalog-grid');
+        // catalogGrid.classList.add('carousel');
+        // catalogGrid.setAttribute('id','carousel');
+        // productsSlider.append(catalogGrid);
+        // const content = document.createElement('div');
+        // content.setAttribute('id','content');
+        // catalogGrid.append(content);
         
         
         let dataDb = []; 
@@ -239,7 +236,7 @@ function Catalog(){
 
                 cardDesc.append(title,priceCard);
                 CatalogGridItem.append(imgLinc, cardDesc, btnAdd);
-                content.append(CatalogGridItem);
+                // content.append(CatalogGridItem);
                 
             
                 btnAdd.addEventListener('click', () => {
@@ -287,9 +284,9 @@ function Catalog(){
             </svg>
         `
 
-        productsSlider.append(prev,next);
+        // productsSlider.append(prev,next);
 
-        mainItem.append(productCardBlock,infoblock1,infoblock2,quoteSlider,products);
+        mainItem.append(productCardBlock,infoblock1,infoblock2,quoteSlider);
 
 
         return elem;

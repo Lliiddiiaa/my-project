@@ -64,7 +64,7 @@ h1 {
     display: none;
 }
 
-.catalog-grid-item img {
+.catalog_component .catalog-grid-item img {
     width: 280px;
     height: 320px;
     position: absolute;

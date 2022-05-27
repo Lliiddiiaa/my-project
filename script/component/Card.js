@@ -61,6 +61,24 @@ function Card(){
 
     let settings = document.createElement('div');
     settings.classList.add('card_settings');
+    // settings.innerHTML = `
+    //     <div class="set-wrapper">
+    //         <div class="settingblock1">
+    //             <div class="favour">
+    //                 <button><p>Add all products to favorites</p></button>
+    //             </div>
+    //             <h4>Set up in a couple of minutes</h4>
+    //             <p>If you are already registered on the site, then you just need to enter your profile so as not to enter information again.</p>
+    //             <button class="btn-card-signin"><p>Sign in</p></button>
+    //         </div>
+    //         <div class="shipping">
+    //             <h4>Choose a shipping method</h4>
+    //             <input>
+    //             <input>
+    //             <p class="comment">Shipping cost is calculated individually by the manager</p>
+    //         </div>
+    //     </div>
+    // `
 
     let setWrapper = document.createElement('div');
     setWrapper.classList.add('set-wrapper');
@@ -91,6 +109,7 @@ function Card(){
             let option = document.createElement('option');
             option.setAttribute('value',elem);
             option.innerText = elem;
+            // console.log(option)
             return option;
         })
     }

@@ -64,7 +64,7 @@ h1 {
     display: none;
 }
 
-.catalog_component .catalog-grid-item img {
+.catalog-grid-item img {
     width: 280px;
     height: 320px;
     position: absolute;
@@ -101,7 +101,7 @@ h1 {
     display: none;
 }
 
-.catalog_component .infoblock2 .wrapper {
+.infoblock2 .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: #555555;
@@ -124,7 +124,7 @@ h1 {
     justify-content: center;
 }
 
-.catalog_component .content-wrapper {
+.content-wrapper {
     width: 73%;
 }
 

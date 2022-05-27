@@ -60,6 +60,7 @@
 
 .menu-main {
     padding-top: 45px;
+    /* text-align: center; */
 }
 
 .menu-main a {
@@ -110,6 +111,7 @@
     }
     
     .menu-main {
+        /* margin-top: 45px; */
         text-align: center;
         display: block !important;
     }
@@ -124,6 +126,7 @@
     }
     
     .top-menu {
+        /* width: 100%; */
         height: 100%;
         position: fixed;
         overflow: hidden;
@@ -181,15 +184,10 @@
 
     .side-menu:checked ~ .top-menu{
         max-height: 100% ;
-        width: 100%;
     }
-
-    
-
     .side-menu:checked ~ .hamb .hamb-line {
         background: transparent;
     }
-
     .side-menu:checked ~ .hamb .hamb-line::before {
         transform: rotate(-45deg);
         top:0;
@@ -235,6 +233,7 @@
         position: absolute;
         top: -3px;
         right: 15px;
+        /* margin-left: 25px; */
     }
 
     .card_widget span::before{

@@ -51,6 +51,13 @@ function Partners(){
     </main>
     `
 
+    // let wrappe = document.createElement('div');
+    // wrappe.classList.add('wrappe');
+    // wrappe.innerHTML = `
+    //     <a href="#" class="open-popup">Открыть попап</a>
+    //     <a href="#" class="open-popup">Открыть попап</a>
+    //     <a href="#" class="open-popup">Открыть попап</a>
+    // `
 
     let popupBG = document.createElement('div');
         popupBG.classList.add('popup__bg');

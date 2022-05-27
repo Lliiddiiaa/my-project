@@ -13,6 +13,7 @@ function Catalog(){
     const homeLogo = document.getElementById('logo-header');
     homeLogo.classList.remove('logo-white');
     })
+    
 
     const elem = document.createElement('div');
     elem.classList.add('item_component');
@@ -256,33 +257,33 @@ function Catalog(){
         render(dataDb);
        
 
-        const prev  = document.createElement('button');
-        prev.setAttribute('id','prevLine');
-        prev.innerHTML = `
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                >
-                <path fill="none" d="M0 0h24v24H0V0z" />
-                <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-            </svg>
-        `
+        // const prev  = document.createElement('button');
+        // prev.setAttribute('id','prevLine');
+        // prev.innerHTML = `
+        //     <svg
+        //         xmlns="http://www.w3.org/2000/svg"
+        //         width="24"
+        //         height="24"
+        //         viewBox="0 0 24 24"
+        //         >
+        //         <path fill="none" d="M0 0h24v24H0V0z" />
+        //         <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+        //     </svg>
+        // `
 
-        const next = document.createElement('button');
-        next.setAttribute('id','nextLine');
-        next.innerHTML = `
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-            >
-                <path fill="none" d="M0 0h24v24H0V0z" />
-                <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-            </svg>
-        `
+        // const next = document.createElement('button');
+        // next.setAttribute('id','nextLine');
+        // next.innerHTML = `
+        //     <svg
+        //         xmlns="http://www.w3.org/2000/svg"
+        //         width="24"
+        //         height="24"
+        //         viewBox="0 0 24 24"
+        //     >
+        //         <path fill="none" d="M0 0h24v24H0V0z" />
+        //         <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+        //     </svg>
+        // `
 
         // productsSlider.append(prev,next);
 
@@ -291,9 +292,6 @@ function Catalog(){
 
         return elem;
     }
-
-
-
 
 
     this.render = (id) => {

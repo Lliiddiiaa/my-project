@@ -95,7 +95,13 @@
     }
 }
 
-@media (max-width:1028px) {
+@media (max-width:946px) {
+    .main-icon {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width:832px) {
     
     .navbar-logo {
         position: absolute;
@@ -191,26 +197,16 @@
         top:0;
     }
     
-    @media (min-width: 768px) {
-        .top-menu {
-            /* max-height: none; */
-            top: 0;
-            position: relative;
-            float: right;
-            width: fit-content;
-        }
-        .menu-main li{
-            float: left;
-        }
-     
-        /* .hamb{
-            display: none;
-        } */
+    .top-menu {  
+        top: 0;
+        position: relative;
+        float: left;
+        width: fit-content;
     }
-
-}
-
-@media (max-width:783px) {
+    
+    .menu-main li{
+        float: left;
+    }
 
     .menu-main {
         margin-right: 110px;
@@ -232,6 +228,23 @@
     .right-item {
         float:none !important;
     }
+     
+    .card_widget {
+        position: absolute;
+        top: -3px;
+        right: 15px;
+        /* margin-left: 25px; */
+    }
 
+    .card_widget span::before{
+        content: "";
+        position: relative;
+        float: left;
+        margin: 2px 5px 0 0;
+        width: 24px;
+        height: 16px;
+        background-image: url('../img/icon-cart-black.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
-

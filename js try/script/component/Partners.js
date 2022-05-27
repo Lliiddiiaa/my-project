@@ -124,8 +124,6 @@ function Partners(){
         let popup = document.querySelector('.popup');
         let openPopupButtons = document.querySelectorAll('.open-popup');
         let closePopupButton = document.querySelector('.close-popup');
-        console.log(openPopupButtons)
-        console.log(popup)
     
         openPopupButtons.forEach((button) => {
             button.addEventListener('click', (e) => {

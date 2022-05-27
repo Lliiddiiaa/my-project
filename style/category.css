@@ -101,7 +101,7 @@ h1 {
     display: none;
 }
 
-.infoblock2 .wrapper {
+.catalog_component .infoblock2 .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: #555555;
@@ -124,7 +124,7 @@ h1 {
     justify-content: center;
 }
 
-.content-wrapper {
+.catalog_component .content-wrapper {
     width: 73%;
 }
 

@@ -261,3 +261,124 @@
     border-radius: 32px;
 }
 
+@media (max-width:1025px) {
+    
+    .btn-add-cart p{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .item_component .btn-add-cart {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width:801px) {
+    
+
+    .item_component .infoblock2 .wrapper,
+    .item_component .infoblock1 .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .infoblock2 .about-col1 {
+        display: grid;
+        grid-column: 1;
+        grid-row: 2;
+        justify-content: center;
+    }
+
+    .infoblock2 .about-col2 {
+        display: grid;
+        grid-column: 1;
+        grid-row: 1;
+        margin: 40px auto;
+        padding: 20px;
+        justify-items: center;
+    }
+
+    .item_component .product-card-block .wrapper {
+        display: block;
+    }
+
+    .product-card-img img {
+        width: 100%;
+    }
+
+    .item_component .favorites {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:700px) {
+
+    .about-col2 .content-wrapper {
+        width: 90% !important;
+    }
+
+    .item_component .quote-slider p {
+        width: 75%;
+    }
+
+    .quote-slider .arrows {
+        display: none;
+    }
+
+}
+
+@media (max-width:426px) {
+    
+    .item_component .btn-about-pr {
+        padding: 3px 5px;
+    }
+
+    .item_component .about-product-info {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width:376px) {
+    
+    .btn-add-cart p {
+        width: 73%;
+    }
+
+    .item_component .quote-slider p {
+        font-size: 30px;
+        line-height: 130%;
+    }
+
+    .item_component .catalog-grid-item:first-child {
+        display: flex;
+        width: 90% !important;
+    }
+
+    .item_component .catalog-grid-item:first-child img {
+        width: 80%;
+    }
+
+    .item_component .catalog-grid-item {
+        display: none;
+    }
+
+    #prevLine,
+    #nextLine {
+        display: none;
+    }
+
+}
+
+@media (max-width:335px) {
+    
+    .btn-add-cart p {
+        width: 83%;
+    }
+
+    .item_component .btn-about-pr {
+        padding: 3px 1px;
+    }
+}
+
+

@@ -184,10 +184,15 @@
 
     .side-menu:checked ~ .top-menu{
         max-height: 100% ;
+        width: 100%;
     }
+
+    
+
     .side-menu:checked ~ .hamb .hamb-line {
         background: transparent;
     }
+
     .side-menu:checked ~ .hamb .hamb-line::before {
         transform: rotate(-45deg);
         top:0;

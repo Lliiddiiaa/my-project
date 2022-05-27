@@ -5,15 +5,18 @@ import {addCard} from "./Card.js";
 
 
 function Catalog(){
-    //не находит элементы
-    // const header = document.querySelector('header');
-    // header.classList.remove('home_header');
-    // const homeSlider = document.getElementById('home-slider');
-    // homeSlider.classList.remove('home_slider');
-    // const homeLogo = document.getElementById('logo-header');
-    // // console.log(homeLogo)
-    // homeLogo.classList.remove('logo-white');
     
+    setTimeout( function deleteHeader() {
+    const header = document.querySelector('header');
+    header.classList.remove('home_header');
+    const homeSlider = document.getElementById('home-slider');
+    homeSlider.classList.remove('home_slider');
+    const homeLogo = document.getElementById('logo-header');
+    homeLogo.classList.remove('logo-white');
+    })
+    
+    // window.onload()
+
     const elem = document.createElement('div');
     elem.classList.add('item_component');
     let data = {};
@@ -113,7 +116,7 @@ function Catalog(){
 
         contentWrapper.append(fv,productH1,order,btnAddCart,tabs);
 
-        // if (localCard.some(data => data.id === +id)){ // просмотрите структуру объекта дата и перепишите условие
+        // if (localCard.some(data => data.id === +id)){ 
         //     btnAdd.innerText = 'Added';
         //     btnAdd.disabled = true;
         // }else{
@@ -140,7 +143,7 @@ function Catalog(){
         
 
         const infoblock2 = document.createElement('section');
-        infoblock2.classList.add('infoblock1');
+        infoblock2.classList.add('infoblock2');
         infoblock2.innerHTML = `
             <div class="wrapper">   
                 <div class="about-col1">
@@ -177,17 +180,9 @@ function Catalog(){
 
         const products = document.createElement('section');
         products.classList.add('products');
-        // const ArrowLeft = document.createElement('button');
-        // const ArrowImg = document.createElement('img');
-        // ArrowImg.setAttribute('src','./img/arrow-left.png');
-        // ArrowLeft.append(ArrowImg);
-        // ArrowLeft.classList.add('arrowNav');
-        // ArrowLeft.classList.add('prev');
-        // products.append(ArrowLeft);
 
 
         const productsSlider = document.createElement('div');
-        // productsSlider.classList.add('productsSlider');
         productsSlider.classList.add('sliderWrapper');
         productsSlider.setAttribute('id','sliderWrapper');
         products.append(productsSlider);
@@ -211,7 +206,6 @@ function Catalog(){
             data = await catalogData();
                  
             data.forEach(d => {
-                // let li = document.createElement('li');
                 let CatalogGridItem = document.createElement('div');
                 CatalogGridItem.classList.add('catalog-grid-item');
                 CatalogGridItem.classList.add('itemLine');
@@ -264,15 +258,6 @@ function Catalog(){
 
         render(dataDb);
        
-        
-
-        // const ArrowRight = document.createElement('button');
-        // const ArrowImgR = document.createElement('img');
-        // ArrowImgR.setAttribute('src','./img/arrow-right.png');
-        // ArrowRight.append(ArrowImgR);
-        // ArrowRight.classList.add('arrowNav');
-        // ArrowRight.classList.add('next');
-        // products.append(ArrowRight);
 
         const prev  = document.createElement('button');
         prev.setAttribute('id','prevLine');
@@ -306,24 +291,10 @@ function Catalog(){
 
         mainItem.append(productCardBlock,infoblock1,infoblock2,quoteSlider,products);
 
-       
-
-        // console.log(data);
-        // Добавить кнопку "В корзину"
-
-        // btnAdd.addEventListener('click', () =>{
-        //     if (addCard(data)){
-        //         btnAdd.innerText = 'Added';
-        //         btnAdd.disabled = true;
-        //     }
-        // })
 
         return elem;
     }
 
-    // render();
-
-    // elem.append(container);
 
 
 

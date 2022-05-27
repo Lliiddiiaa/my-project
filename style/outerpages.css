@@ -170,23 +170,13 @@ h1 {
 .position {
     font-size: 13px !important;
 }
-/*--------------------------------------?????
-@media (max-width:1028px) {
-    .top-menu {
-        background-color: #E3DAD0;
-    }
-
-    .hamb {
-        background-color: #E3DAD0;
-    }
-}*/
 
 @media (max-width: 800px) {
 
     .back-page {
-        display: flex;
-        justify-content:center;
         text-align: center;
+        width: max-content;
+        margin: 0 auto;
     }
 
     .main .wrapper {

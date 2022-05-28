@@ -7,9 +7,12 @@ function Home(){
     const header = document.querySelector('header');
     header.classList.add('home_header');
     const homeLogo = document.getElementById('logo-header');
+    homeLogo.classList.add('change');
     homeLogo.classList.add('logo-white');
     const homeSlider = document.getElementById('home-slider');
     homeSlider.classList.add('home_slider');
+    
+
 
     const elem = document.createElement('div');
     elem.classList.add('home_component');
@@ -152,8 +155,7 @@ function Home(){
         function block2(data) {
             
             data = data.slice(7, 10);
-            // console.log(data);
-
+            
             data.forEach(d => {
                 let CatalogGridItem = document.createElement('div');
                 CatalogGridItem.classList.add('catalog-grid-item');
@@ -179,8 +181,6 @@ function Home(){
                 let btnAdd = document.createElement('button');
                 btnAdd.classList.add('btn-catalog-add');
                 if (localCard && localCard.some(g => g.id === d.id)){
-                    // console.log(d)
-                    // console.log(d.id)
                     btnAdd.innerText = 'Added';
                     btnAdd.disabled = true;
                 }else{

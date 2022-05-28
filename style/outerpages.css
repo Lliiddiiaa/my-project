@@ -170,23 +170,13 @@ h1 {
 .position {
     font-size: 13px !important;
 }
-/*--------------------------------------?????
-@media (max-width:1028px) {
-    .top-menu {
-        background-color: #E3DAD0;
-    }
-
-    .hamb {
-        background-color: #E3DAD0;
-    }
-}*/
 
 @media (max-width: 800px) {
 
     .back-page {
-        display: flex;
-        justify-content:center;
-        text-align: center;
+        display: block;
+        width:35%;
+        margin: 0 auto;
     }
 
     .main .wrapper {
@@ -236,10 +226,6 @@ h1 {
         height: 20px !important;
     }
 
-    /* .back-page {
-        margin-left: 30%;
-    } */
-
     .about-numbers {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -258,6 +244,10 @@ h1 {
 
     .icon-signature-block img {
         display: none;
+    }
+
+    .back-page {
+        width:45%;
     }
 
 }

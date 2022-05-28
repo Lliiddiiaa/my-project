@@ -7,7 +7,6 @@ function Contacts(){
     const homeSlider = document.getElementById('home-slider');
     homeSlider.classList.remove('home_slider');
     const homeLogo = document.getElementById('logo-header');
-    // console.log(homeLogo)
     homeLogo.classList.remove('logo-white');
 
 

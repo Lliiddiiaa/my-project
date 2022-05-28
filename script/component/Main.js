@@ -14,14 +14,12 @@ function Main(){
             let item = await product.ren(id);
             hash = hash.slice(0, index);
             document.title = product.title;
-            // console.log(item);
             elem.append(item);
         }
         if (hash === 'productcard') return;
         import(`./${hash}.js`)
             .then(module => {
                 elem.innerHTML = '';
-                // console.log(module);
                 elem.append(new module.default().init());
                 document.title = module.title;
                 if(module.returnHeader) {

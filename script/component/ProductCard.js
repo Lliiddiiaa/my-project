@@ -1,18 +1,10 @@
 import {itemApi,catalogData} from "./catalogApi.js";
 import spinner from "./spinner.js";
 import {addCard} from "./Card.js";
-// import lineSlider from "./script.js";
+
 
 
 function Catalog(){
-    //не находит элементы
-    // const header = document.querySelector('header');
-    // header.classList.remove('home_header');
-    // const homeSlider = document.getElementById('home-slider');
-    // homeSlider.classList.remove('home_slider');
-    // const homeLogo = document.getElementById('logo-header');
-    // // console.log(homeLogo)
-    // homeLogo.classList.remove('logo-white');
     
     const elem = document.createElement('div');
     elem.classList.add('item_component');
@@ -113,13 +105,6 @@ function Catalog(){
 
         contentWrapper.append(fv,productH1,order,btnAddCart,tabs);
 
-        // if (localCard.some(data => data.id === +id)){ // просмотрите структуру объекта дата и перепишите условие
-        //     btnAdd.innerText = 'Added';
-        //     btnAdd.disabled = true;
-        // }else{
-        //     btnAdd.innerText = 'Add';
-        // }
-
         
         const infoblock1 = document.createElement('section');
         infoblock1.classList.add('infoblock1');
@@ -177,17 +162,8 @@ function Catalog(){
 
         const products = document.createElement('section');
         products.classList.add('products');
-        // const ArrowLeft = document.createElement('button');
-        // const ArrowImg = document.createElement('img');
-        // ArrowImg.setAttribute('src','./img/arrow-left.png');
-        // ArrowLeft.append(ArrowImg);
-        // ArrowLeft.classList.add('arrowNav');
-        // ArrowLeft.classList.add('prev');
-        // products.append(ArrowLeft);
-
 
         const productsSlider = document.createElement('div');
-        // productsSlider.classList.add('productsSlider');
         productsSlider.classList.add('sliderWrapper');
         productsSlider.setAttribute('id','sliderWrapper');
         products.append(productsSlider);
@@ -211,7 +187,6 @@ function Catalog(){
             data = await catalogData();
                  
             data.forEach(d => {
-                // let li = document.createElement('li');
                 let CatalogGridItem = document.createElement('div');
                 CatalogGridItem.classList.add('catalog-grid-item');
                 CatalogGridItem.classList.add('itemLine');
@@ -263,16 +238,6 @@ function Catalog(){
         }
 
         render(dataDb);
-       
-        
-
-        // const ArrowRight = document.createElement('button');
-        // const ArrowImgR = document.createElement('img');
-        // ArrowImgR.setAttribute('src','./img/arrow-right.png');
-        // ArrowRight.append(ArrowImgR);
-        // ArrowRight.classList.add('arrowNav');
-        // ArrowRight.classList.add('next');
-        // products.append(ArrowRight);
 
         const prev  = document.createElement('button');
         prev.setAttribute('id','prevLine');
@@ -304,26 +269,11 @@ function Catalog(){
 
         productsSlider.append(prev,next);
 
-        mainItem.append(productCardBlock,infoblock1,infoblock2,quoteSlider,products);
-
-       
-
-        // console.log(data);
-        // Добавить кнопку "В корзину"
-
-        // btnAdd.addEventListener('click', () =>{
-        //     if (addCard(data)){
-        //         btnAdd.innerText = 'Added';
-        //         btnAdd.disabled = true;
-        //     }
-        // })
+        mainItem.append(productCardBlock,infoblock1,infoblock2,quoteSlider);
 
         return elem;
     }
 
-    // render();
-
-    // elem.append(container);
 
 
 

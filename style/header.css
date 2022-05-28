@@ -184,6 +184,7 @@
 
     .side-menu:checked ~ .top-menu{
         max-height: 100% ;
+        width: 100%;
     }
     .side-menu:checked ~ .hamb .hamb-line {
         background: transparent;
@@ -246,5 +247,31 @@
         background-image: url('../img/icon-cart-black.png');
         background-repeat: no-repeat;
         background-position: center;
+    }
+}
+
+@media (max-width:376px) {
+    
+    .header-slider {
+        display: none;
+    }
+
+    .home_slider {
+        display: none !important;
+    }
+
+    .home_header {
+       background-image: none !important;
+       background-color: #F5ECE3;
+    }
+
+    .home_header .hamb-line, 
+    .home_header .hamb-line::before, 
+    .home_header .hamb-line::after {
+        background: #555555 !important;
+    }
+
+    .change {
+        background-image: url(../img/logo-black.png) !important;
     }
 }

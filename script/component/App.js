@@ -2,7 +2,6 @@ import Header from "./Header.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
 import initSlider from "./homeSlider.js";
-// import lineSlider from "./script.js";
 
 function App(){
     const root = document.querySelector('#root');
@@ -21,7 +20,6 @@ function App(){
     this.init = () => {
         render(Header, Main, Footer);
         initSlider();
-        // lineSlider();
     }
 
 }
